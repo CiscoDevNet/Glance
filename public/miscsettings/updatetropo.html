@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-style: italic;
+            width: 50%;
+            margin: 0px auto;
+        }
+        #login_form {
+
+        }
+
+        #f1 {
+            background-color: #FFF;
+            border-style: solid;
+            border-width: 1px;
+            padding: 23px 1px 20px 114px;
+        }
+        .f1_label {
+            white-space: nowrap;
+        }
+        span {color: white;}
+
+        .new {
+            background: black;
+            text-align: center;
+        }
+
+
+    </style>
+</head>
+	
+    <script type="text/javascript" src="../miscsettings/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="../miscsettings/updatetropo.js"></script>
+
+
+
+<body>
+<div>
+    <div class="new"><span>Update Tropo Token</span></div>  <!-- This is your header text-->
+    <form name="f1">
+        <table>
+            <tr>
+                <td><input type="hidden" name="url" value="/updatetropo.html" /><!-- This is your first Input Box-->
+                </td>
+            </tr>
+            <tr>
+                <td class="f1_label">Tropo Token:</td> <!-- This is your first Input Box Label-->
+                <td><input type="text" id="id_tropo" name="tropoToken" value="" placeholder="Input Tropo Token" /><!-- This is your first Input Box-->
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input id="id_sub" type="button" name="Update" value="Update" style="font-size:18px; " /><!-- This is your submit button -->
+                </td>
+            </tr>
+            <tr align="right">
+                <td class="f1_label"></td>
+                <td align="right">
+                    <a href="./settings.html"><p style="text-align:center">Return to Settings</a><!-- This is your submit button -->
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>

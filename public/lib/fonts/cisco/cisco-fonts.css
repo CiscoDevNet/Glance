@@ -1,0 +1,202 @@
+@font-face {
+    font-family: "Cisco";
+    font-weight: 900;
+    font-style: normal;
+    src: local("Cisco-Black"), url("Cisco-Black.ttf");
+}
+
+@font-face {
+    font-family: "Cisco";
+    font-weight: 300;
+    font-style: normal;
+    src: local("Cisco-Light"), url("Cisco-Light.ttf");
+}
+
+@font-face {
+    font-family: "Cisco";
+    font-weight: 400;
+    font-style: italic;
+    src: local("Cisco-Oblique-Regular"), url("Cisco-Oblique-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Cisco";
+    font-weight: 400;
+    font-style: normal;
+    src: local("Cisco-Symbol"), url("Cisco-Symbol.ttf");
+}
+
+@font-face {
+    font-family: "CiscoSans";
+    font-weight: 700;
+    font-style: italic;
+    src: local("CiscoSansBoldOblique"), url("CiscoSansBoldOblique.otf");
+}
+
+@font-face {
+    font-family: "CiscoSans";
+    font-weight: 700;
+    font-style: normal;
+    src: local("CiscoSansBold"), url("CiscoSansBold.otf");
+}
+
+@font-face {
+    font-family: "CiscoSans";
+    font-weight: 200;
+    font-style: normal;
+    src: local("CiscoSansExtraLight"), url("CiscoSansExtraLight_0.otf");
+}
+
+@font-face {
+    font-family: "CiscoSans";
+    font-weight: 200;
+    font-style: italic;
+    src: local("CiscoSansExtraLightOblique"), url("CiscoSansExtraLightOblique.otf");
+}
+
+@font-face {
+    font-family: "CiscoSans";
+    font-weight: 800;
+    font-style: italic;
+    src: local("CiscoSansHeavyOblique"), url("CiscoSansHeavyOblique.otf");
+}
+
+@font-face {
+    font-family: "CiscoSans";
+    font-weight: 800;
+    font-style: normal;
+    src: local("CiscoSansHeavy"), url("CiscoSansHeavy.otf");
+}
+
+@font-face {
+    font-family: "CiscoSans";
+    font-weight: 300;
+    font-style: italic;
+    src: local("CiscoSansLightOblique"), url("CiscoSansLightOblique.otf");
+}
+
+@font-face {
+    font-family: "CiscoSans";
+    font-weight: 300;
+    font-style: normal;
+    src: local("CiscoSansLight"), url("CiscoSansLight.otf");
+}
+
+@font-face {
+    font-family: "CiscoSans";
+    font-weight: 400;
+    font-style: normal;
+    src: local("CiscoSansRegular"), url("CiscoSansRegular_0.otf");
+}
+
+@font-face {
+    font-family: "CiscoSans";
+    font-weight: 400;
+    font-style: italic;
+    src: local("CiscoSansRegularOblique"), url("CiscoSansRegularOblique.otf");
+}
+
+@font-face {
+    font-family: "CiscoSans";
+    font-weight: 100;
+    font-style: italic;
+    src: local("CiscoSansThinOblique"), url("CiscoSansThinOblique.otf");
+}
+
+@font-face {
+    font-family: "CiscoSans";
+    font-weight: 100;
+    font-style: normal;
+    src: local("CiscoSansThin"), url("CiscoSansThin.otf");
+}
+
+@font-face {
+    font-family: "CiscoSansTT";
+    font-weight: 700;
+    font-style: italic;
+    src: local("CiscoSansTTBoldOblique"), url("CiscoSansTTBoldOblique.ttf");
+}
+
+@font-face {
+    font-family: "CiscoSansTT";
+    font-weight: 700;
+    font-style: normal;
+    src: local("CiscoSansTTBold"), url("CiscoSansTTBold.ttf");
+}
+
+@font-face {
+    font-family: "CiscoSansTT";
+    font-weight: 200;
+    font-style: italic;
+    src: local("CiscoSansTTExtraLightOblique"), url("CiscoSansTTExtraLightOblique.ttf");
+}
+
+@font-face {
+    font-family: "CiscoSansTT";
+    font-weight: 200;
+    font-style: normal;
+    src: local("CiscoSansTTExtraLight"), url("CiscoSansTTExtraLight.ttf");
+}
+
+@font-face {
+    font-family: "CiscoSansTT";
+    font-weight: 800;
+    font-style: italic;
+    src: local("CiscoSansTTHeavyOblique"), url("CiscoSansTTHeavyOblique.ttf");
+}
+
+@font-face {
+    font-family: "CiscoSansTT";
+    font-weight: 800;
+    font-style: normal;
+    src: local("CiscoSansTTHeavy"), url("CiscoSansTTHeavy.ttf");
+}
+
+@font-face {
+    font-family: "CiscoSansTT";
+    font-weight: 400;
+    font-style: italic;
+    src: local("CiscoSansTTRegularOblique"), url("CiscoSansTTRegularOblique.ttf");
+}
+
+@font-face {
+    font-family: "CiscoSansTT";
+    font-weight: 400;
+    font-style: normal;
+    src: local("CiscoSansTTRegular"), url("CiscoSansTTRegular.ttf");
+}
+
+@font-face {
+    font-family: "CiscoSansTT";
+    font-weight: 100;
+    font-style: italic;
+    src: local("CiscoSansTTThinOblique"), url("CiscoSansTTThinOblique.ttf");
+}
+
+@font-face {
+    font-family: "CiscoSansTT";
+    font-weight: 100;
+    font-style: normal;
+    src: local("CiscoSansTTThin"), url("CiscoSansTTThin.ttf");
+}
+
+@font-face {
+    font-family: "CiscoScreenPRO";
+    font-weight: 700;
+    font-style: normal;
+    src: local("CiscoScreenPROBold"), url("CiscoScreenPROBold.ttf");
+}
+
+@font-face {
+    font-family: "CiscoScreenPRO";
+    font-weight: 300;
+    font-style: normal;
+    src: local("CiscoScreenPROLight"), url("CiscoScreenPROLight.ttf");
+}
+
+@font-face {
+    font-family: "CiscoScreenPRO";
+    font-weight: 400;
+    font-style: normal;
+    src: local("CiscoScreenPRORegular"), url("CiscoScreenPRORegular.ttf");
+}

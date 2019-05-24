@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-style: italic;
+            width: 100%;
+            margin: 0px auto;
+        }
+        #login_form {
+
+        }
+
+        #f1 {
+            background-color: #FFF;
+            border-style: solid;
+            border-width: 1px;
+            padding: 23px 1px 20px 20px;
+        }
+        .f1_label {
+            white-space: nowrap;
+        }
+        span {color: white;}
+
+        .new {
+            background: black;
+            text-align: center;
+        }
+
+
+    </style>
+
+
+</head>
+
+
+<body>
+<script>
+    function getAuthAPI(){
+        return window.location.protocol + '//' + window.location.host + '/api/v1/auth/simple'
+    }
+</script>
+<div id="login_form">
+    <div class="new"><span>Glance Zones</span></div>  <!-- This is your header text-->
+    <form name="f1" method="post" action= "/api/v1/glancezone/add/byglancemap" enctype="multipart/form-data" id="f1">
+        <table>
+            <tr>
+                <td><input type="hidden" name="url" value="/facilityzoneglancemap.html" /><!-- This is your first Input Box-->
+                </td>
+            </tr>
+            <tr>
+                <td class="f1_label">"Floor Id/Name</td> <!-- This is your first Input Box Label-->
+                <td><input type="text" name="floor" value="Floor Id/Name" /><!-- This is your first Input Box-->
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="f1_label">"Zone Name/Id</td> <!-- This is your first Input Box Label-->
+                <td><input type="text" name="zoneName" value="Customized" /><!-- This is your first Input Box-->
+                </td>
+            </tr>
+
+            <tr>
+                <td class="f1_label">Zone Display Name</td> <!-- This is your first Input Box Label-->
+                <td><input type="text" name="zoneDisplayName" value="Customized North" /><!-- This is your first Input Box-->
+                </td>
+            </tr>
+
+            <tr>
+                <td class="f1_label">Zone Area(Pixels of the Glance SVG map)</td> <!-- This is your first Input Box Label-->
+                <td><input type="text" name="zoneArea" size="200" value='{"name":"Customized","zoneCoordinate":[{"x":20,"y":10},{"x":30,"y":10},{"x":30,"y":30},{"x":20,"y":30}],"zoneType":"ZONE"}'  /><!-- This is your first Input Box-->
+                </td>
+            </tr>
+
+            <tr>
+                <td class="f1_label">Color</td> <!-- This is your first Input Box Label-->
+                <td><input type="text" name="zoneColor" value="#930025" /><!-- This is your first Input Box-->
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="submit" name="Save" value="Submit" style="font-size:18px; " /><!-- This is your submit button -->
+                </td>
+            </tr>
+            <tr align="right">
+                <td class="f1_label"></td>
+                <td align="right">
+                    <a href="./settings.html"><p style="text-align:center">Return to Settings</a><!-- This is your submit button -->
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>

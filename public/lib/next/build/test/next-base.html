@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <title>Auto Test</title>
+    <link type="text/css" rel="stylesheet" href="../bin/lib/qunit-1.12.0.css">
+    <script type="text/javascript" src="../bin/lib/qunit-1.12.0.js"></script>
+    <script type="text/javascript" src="../bin/lib/qunit-reporter-junit.js"></script>
+
+    <script type="text/javascript">
+        var report;
+        QUnit.jUnitReport = function(data) {
+            report = data.xml;
+        };
+    </script>
+
+    <!-- Test Code Start -->
+    <script type="text/javascript" src="../../module-base/base.js"></script>
+    <script type="text/javascript" src="../../module-base/lang.js"></script>
+    <script type="text/javascript" src="../../module-base/lang/idle.js"></script>
+    <script type="text/javascript" src="../../module-base/lang/identity.js"></script>
+    <script type="text/javascript" src="../../module-base/lang/bool.js"></script>
+    <script type="text/javascript" src="../../module-base/lang/uuid.js"></script>
+    <script type="text/javascript" src="../../module-base/lang/clone.js"></script>
+    <script type="text/javascript" src="../../module-base/lang/extend.js"></script>
+    <script type="text/javascript" src="../../module-base/lang/is.js"></script>
+    <script type="text/javascript" src="../../module-base/lang/each.js"></script>
+    <script type="text/javascript" src="../../module-base/lang/path.js"></script>
+    <script type="text/javascript" src="../../module-base/lang/func.js"></script>
+    <script type="text/javascript" src="../../module-base/lang/array.js"></script>
+    <script type="text/javascript" src="../../module-base/lang/date.js"></script>
+    <script type="text/javascript" src="../../module-base/lang/math.js"></script>
+    <script type="text/javascript" src="../../module-base/lang/string.js"></script>
+    <script type="text/javascript" src="../../module-base/lang/sets.js"></script>
+    <script type="text/javascript" src="../../module-base/lang/timer.js"></script>
+    <script type="text/javascript" src="../../module-base/core.js"></script>
+    <script type="text/javascript" src="../../module-base/core/serial.js"></script>
+    <script type="text/javascript" src="../../module-base/core/binding.js"></script>
+    <script type="text/javascript" src="../../module-base/core/Object.js"></script>
+    <script type="text/javascript" src="../../module-base/core/define.js"></script>
+    <script type="text/javascript" src="../../module-base/core/Map.js"></script>
+    <script type="text/javascript" src="../../module-base/core/Counter.js"></script>
+    <script type="text/javascript" src="../../module-base/core/List.js"></script>
+    <script type="text/javascript" src="../../module-base/core/List/slicing.js"></script>
+    <script type="text/javascript" src="../../module-base/core/List/mapping.js"></script>
+    <script type="text/javascript" src="../../module-base/core/List/tuple.js"></script>
+    <script type="text/javascript" src="../../module-base/core/List/mapeach.js"></script>
+    <script type="text/javascript" src="../../module-base/core/List/concatenate.js"></script>
+    <script type="text/javascript" src="../../module-base/core/List/sorting.js"></script>
+    <script type="text/javascript" src="../../module-base/core/UniqueList.js"></script>
+    <script type="text/javascript" src="../../module-base/core/template.js"></script>
+    <script type="text/javascript" src="../../module-base/core/Hierarchical.js"></script>
+    <script type="text/javascript" src="../../module-base/core/HierarchicalTemplate.js"></script>
+    <script type="text/javascript" src="../../module-base/geometry.js"></script>
+    <script type="text/javascript" src="../../module-base/geometry/Math.js"></script>
+    <script type="text/javascript" src="../../module-base/geometry/Rectangle.js"></script>
+    <script type="text/javascript" src="../../module-base/geometry/Line.js"></script>
+    <script type="text/javascript" src="../../module-base/geometry/BezierCurve.js"></script>
+    <script type="text/javascript" src="../../module-base/geometry/Vector.js"></script>
+    <script type="text/javascript" src="../../module-base/geometry/MatrixSupport.js"></script>
+    <script type="text/javascript" src="../../module-base/geometry/Matrix.js"></script>
+    <!-- Test Code End -->
+</head>
+
+<body>
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+
+    <!-- Test Case Start -->
+    <script type="text/javascript" src="../../module-base/lang.test/idle.js"></script>
+    <script type="text/javascript" src="../../module-base/lang.test/uuid.js"></script>
+    <script type="text/javascript" src="../../module-base/lang.test/clone.js"></script>
+    <script type="text/javascript" src="../../module-base/lang.test/extend.js"></script>
+    <script type="text/javascript" src="../../module-base/lang.test/is.js"></script>
+    <script type="text/javascript" src="../../module-base/lang.test/each.js"></script>
+    <script type="text/javascript" src="../../module-base/lang.test/path.js"></script>
+    <script type="text/javascript" src="../../module-base/lang.test/func.js"></script>
+    <script type="text/javascript" src="../../module-base/lang.test/array.js"></script>
+    <script type="text/javascript" src="../../module-base/lang.test/date.js"></script>
+    <script type="text/javascript" src="../../module-base/lang.test/math.js"></script>
+    <script type="text/javascript" src="../../module-base/lang.test/string.js"></script>
+    <script type="text/javascript" src="../../module-base/core.test/binding.js"></script>
+    <script type="text/javascript" src="../../module-base/core.test/Object.js"></script>
+    <script type="text/javascript" src="../../module-base/core.test/define.js"></script>
+    <script type="text/javascript" src="../../module-base/core.test/Map.js"></script>
+    <script type="text/javascript" src="../../module-base/core.test/Counter.js"></script>
+    <script type="text/javascript" src="../../module-base/core.test/list-basic.js"></script>
+    <script type="text/javascript" src="../../module-base/core.test/list-operation.js"></script>
+    <script type="text/javascript" src="../../module-base/core.test/list-calculation.js"></script>
+    <script type="text/javascript" src="../../module-base/core.test/list-formula.js"></script>
+    <script type="text/javascript" src="../../module-base/core.test/list-slicing.js"></script>
+    <script type="text/javascript" src="../../module-base/core.test/list-mapping.js"></script>
+    <script type="text/javascript" src="../../module-base/core.test/list-tuple.js"></script>
+    <script type="text/javascript" src="../../module-base/core.test/list-mapeach.js"></script>
+    <script type="text/javascript" src="../../module-base/core.test/list-concatenate.js"></script>
+    <script type="text/javascript" src="../../module-base/core.test/list-sorting.js"></script>
+    <script type="text/javascript" src="../../module-base/core.test/list-unique.js"></script>
+    <script type="text/javascript" src="../../module-base/core.test/Hierarchical.js"></script>
+    <script type="text/javascript" src="../../module-base/geometry.test/Vector.js"></script>
+    <script type="text/javascript" src="../../module-base/geometry.test/Matrix.js"></script>
+    <script type="text/javascript" src="../../module-base/geometry.test/BezierCurve.js"></script>
+    <!-- Test Case End -->
+</body>
+
+</html>

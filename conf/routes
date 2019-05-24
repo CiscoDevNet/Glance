@@ -1,0 +1,455 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+
+#Glance Configuration API
+GET           /api/v1/template/conf                                 controllers.glance.Conf.confTemplate
+GET           /api/v1/conf                                          controllers.glance.Conf.getAll
+GET           /api/v1/conf/:name                                    controllers.glance.Conf.getByName(name: String)
+POST          /api/v1/conf/:name/:subName                           controllers.glance.Conf.setByNameWithSubName(name: String,subName:String)
+POST          /api/v1/conf/:name                                    controllers.glance.Conf.setByName(name: String)
+
+GET           /api/v1/zonecounting/threshold                        controllers.glance.Conf.zoneCountThreshold
+POST          /api/v1/zonecounting/threshold/:count                 controllers.glance.Conf.setZoneCountThreshold(count:Long)
+GET           /api/v1/zonecounting/threshold/:count                 controllers.glance.Conf.setZoneCountThreshold(count:Long)
+
+
+#CMX System settings
+GET           /api/v1/system/config                                 controllers.glance.Conf.getAllForGlanceConfUIDirectly
+POST          /api/v1/system/config                                 controllers.glance.Conf.updateSystemSetting
+GET           /api/v1/system/cmxfloors                              controllers.glance.Conf.readAllCMXFloors
+GET           /api/v1/system/floor                                  controllers.glance.TrackCampus.readDefaultTrackFloors
+POST          /api/v1/system/floor/:floorId                         controllers.glance.TrackerFloor.updateFloorForGlance(floorId:String)
+GET           /api/v1/system/cmxtest                                controllers.glance.Conf.cmxTest
+POST          /api/v1/system/resetdata                              controllers.glance.Conf.cleanAllCheckInUserData
+GET           /api/v1/system/resetdata                              controllers.glance.Conf.cleanAllCheckInUserData
+
+POST          /api/v1/system/systemzones                            controllers.glance.GlanceColorZone.updateSystemZones
+#fixme
+GET           /api/v1/system/systemzones                            controllers.glance.GlanceColorZone.updateSystemZones
+GET           /api/v1/system/systemcolors                           controllers.glance.GlanceColorZone.getDefaultColors
+
+
+#Glance Zone APIs
+GET           /api/v1/template/glancezone                           controllers.glance.GlanceColorZone.glanceZoneTemplate
+GET           /api/v1/glancezone                                    controllers.glance.GlanceColorZone.readGlanceZones
+GET           /api/v1/glancezone/:floorId                           controllers.glance.GlanceColorZone.readGlanceZonesByFloor(floorId:String)
+GET           /api/v1/glancezone/:floorId/:zoneId                   controllers.glance.GlanceColorZone.readGlanceZonesByZoneId(floorId:String,zoneId:String)
+
+GET           /api/v1/glancezone/:floorId/:zoneId/labelposition     controllers.glance.GlanceColorZone.updateZoneLabelPosition(zoneId,floorId)
+POST          /api/v1/glancezone/:floorId/:zoneId/labelposition     controllers.glance.GlanceColorZone.updateZoneLabelPositionPost(zoneId,floorId)
+
+POST          /api/v1/glancezone                                    controllers.glance.GlanceColorZone.addZone
+#fixme
+POST          /api/v1/glancezones                                   controllers.glance.GlanceColorZone.addTempZones
+POST          /api/v1/glancezone/temporary/zones                    controllers.glance.GlanceColorZone.addTempZones
+#please fixme glancezonex for official client implemented
+POST          /api/v1/glancezone/add/bylocationmap                  controllers.glance.GlanceColorZone.addZoneWithMapOriginalPosition
+POST          /api/v1/glancezone/add/byglancemap                    controllers.glance.GlanceColorZone.addZoneByGlanceMapPixels
+POST          /api/v1/glancezone/:floorId                           controllers.glance.GlanceColorZone.addZoneToFloor(floorId:String)
+DELETE        /api/v1/glancezone/:floorId                           controllers.glance.GlanceColorZone.deleteZoneByFloor(floorId:String)
+DELETE        /api/v1/glancezone/:floorId/:zoneId                   controllers.glance.GlanceColorZone.deleteZoneByName(floorId:String,zoneId:String)
+
+
+#Glance Auth API
+GET           /api/v1/session/logout                                controllers.glance.GlanceAuth.logoutAndRedirect
+GET           /api/v1/session/user                                  controllers.glance.GlanceAuth.loggedUser
+DELETE        /api/v1/session/user                                  controllers.glance.GlanceAuth.logout
+POST          /api/v1/session/user                                  controllers.glance.GlanceAuth.add
+GET           /api/v1/session/token                                 controllers.glance.GlanceAuth.showMyToken
+POST          /api/v1/session/token                                 controllers.glance.GlanceAuth.getAuthToken
+POST          /api/v1/auth/:provider                                controllers.glance.GlanceAuth.auth(provider:String)
+GET           /api/v1/session/pass                                  controllers.glance.GlanceAuth.changePass
+POST          /api/v1/session/pass                                  controllers.glance.GlanceAuth.changePass
+GET           /api/v1/session/resetpass                             controllers.glance.GlanceAuth.resetToDefault
+POST          /api/v1/session/resetpass                             controllers.glance.GlanceAuth.resetToDefault
+
+
+#Glance Tracking Floor Info
+GET           /api/v1/template/trackfloors                          controllers.glance.TrackerFloor.trackerFloorTemplate
+GET           /api/v1/trackfloors                                   controllers.glance.TrackerFloor.getAll
+GET           /api/v1/trackfloors/:floorId                          controllers.glance.TrackerFloor.getById(floorId:String)
+POST          /api/v1/trackfloors                                   controllers.glance.TrackerFloor.add
+POST          /api/v1/trackfloors/building/:buildingId              controllers.glance.TrackerFloor.addToBuilding(buildingId:String)
+POST          /api/v1/trackfloors/:floorId                          controllers.glance.TrackerFloor.update(floorId:String)
+DELETE        /api/v1/trackfloors/:floorId                          controllers.glance.TrackerFloor.delete(floorId:String)
+
+#rename api names
+GET           /api/v1/template/floors                               controllers.glance.TrackerFloor.trackerFloorTemplate
+GET           /api/v1/floors                                        controllers.glance.TrackerFloor.getAll
+GET           /api/v1/floors/:floorId                               controllers.glance.TrackerFloor.getById(floorId:String)
+POST          /api/v1/floors                                        controllers.glance.TrackerFloor.add
+POST          /api/v1/floors/building/:buildingId                   controllers.glance.TrackerFloor.addToBuilding(buildingId:String)
+POST          /api/v1/floors/:floorId                               controllers.glance.TrackerFloor.update(floorId:String)
+DELETE        /api/v1/floors/:floorId                               controllers.glance.TrackerFloor.delete(floorId:String)
+
+#update track floor info...
+POST          /api/v1/trackfloors/:floor_id_name/:confName                                      controllers.glance.TrackerFloor.updateFloorInfoBySubName(floor_id_name:String,confName:String,subConfName:String="",subSubConfName:String="")
+POST          /api/v1/trackfloors/:floor_id_name/:confName/:subConfName                         controllers.glance.TrackerFloor.updateFloorInfoBySubName(floor_id_name:String,confName:String,subConfName:String,subSubConfName:String="")
+POST          /api/v1/trackfloors/:floor_id_name/:confName/:subConfName/:subSubConfName         controllers.glance.TrackerFloor.updateFloorInfoBySubName(floor_id_name:String,confName:String,subConfName:String,subSubConfName:String)
+
+POST          /api/v1/floors/:floor_id_name/:confName                                           controllers.glance.TrackerFloor.updateFloorInfoBySubName(floor_id_name:String,confName:String,subConfName:String="",subSubConfName:String="")
+POST          /api/v1/floors/:floor_id_name/:confName/:subConfName                              controllers.glance.TrackerFloor.updateFloorInfoBySubName(floor_id_name:String,confName:String,subConfName:String,subSubConfName:String="")
+POST          /api/v1/floors/:floor_id_name/:confName/:subConfName/:subSubConfName              controllers.glance.TrackerFloor.updateFloorInfoBySubName(floor_id_name:String,confName:String,subConfName:String,subSubConfName:String)
+
+#via get method
+GET          /api/v1/trackfloors/:floor_id_name/:confName                                       controllers.glance.TrackerFloor.updateFloorInfoBySubNameViaGet(floor_id_name:String,confName:String,subConfName:String="",subSubConfName:String="")
+GET          /api/v1/trackfloors/:floor_id_name/:confName/:subConfName                          controllers.glance.TrackerFloor.updateFloorInfoBySubNameViaGet(floor_id_name:String,confName:String,subConfName:String,subSubConfName:String="")
+GET          /api/v1/trackfloors/:floor_id_name/:confName/:subConfName/:subSubConfName          controllers.glance.TrackerFloor.updateFloorInfoBySubNameViaGet(floor_id_name:String,confName:String,subConfName:String,subSubConfName:String)
+#rename apis
+GET          /api/v1/floors/:floor_id_name/:confName                                            controllers.glance.TrackerFloor.updateFloorInfoBySubNameViaGet(floor_id_name:String,confName:String,subConfName:String="",subSubConfName:String="")
+GET          /api/v1/floors/:floor_id_name/:confName/:subConfName                               controllers.glance.TrackerFloor.updateFloorInfoBySubNameViaGet(floor_id_name:String,confName:String,subConfName:String,subSubConfName:String="")
+GET          /api/v1/floors/:floor_id_name/:confName/:subConfName/:subSubConfName               controllers.glance.TrackerFloor.updateFloorInfoBySubNameViaGet(floor_id_name:String,confName:String,subConfName:String,subSubConfName:String)
+
+
+#Glance Tracking Building Info
+GET            /api/v1/template/trackbuildings                      controllers.glance.TrackBuilding.trackerBuildingTemplate
+GET            /api/v1/trackbuildings/:buildingId                   controllers.glance.TrackBuilding.readBuildingWithFloors(buildingId:String)
+GET            /api/v1/trackbuildings                               controllers.glance.TrackBuilding.getAll
+POST           /api/v1/trackbuildings                               controllers.glance.TrackBuilding.add
+POST           /api/v1/trackbuldings/campus/:campusId               controllers.glance.TrackBuilding.addToCampus(campusId:String)
+POST           /api/v1/trackbuildings/:buildingId                   controllers.glance.TrackBuilding.update(buildingId:String)
+POST           /api/v1/trackbuildings/:buildingId/:floorId          controllers.glance.TrackBuilding.addFloor(buildingId:String,floorId:String)
+DELETE         /api/v1/trackbuildings/:buildingId/:floorId          controllers.glance.TrackBuilding.removeFloorIdOnly(buildingId:String,floorId:String)
+DELETE         /api/v1/trackbuildings/:buildingId/:floorId/all      controllers.glance.TrackBuilding.removeFloor(buildingId:String,floorId:String)
+
+#Rename Glance Tracking Building Info
+GET            /api/v1/template/buildings                           controllers.glance.TrackBuilding.trackerBuildingTemplate
+GET            /api/v1/buildings/:buildingId                        controllers.glance.TrackBuilding.readBuildingWithFloors(buildingId:String)
+GET            /api/v1/buildings                                    controllers.glance.TrackBuilding.getAll
+POST           /api/v1/buildings                                    controllers.glance.TrackBuilding.add
+POST           /api/v1/buldings/campus/:campusId                    controllers.glance.TrackBuilding.addToCampus(campusId:String)
+POST           /api/v1/buildings/:buildingId                        controllers.glance.TrackBuilding.update(buildingId:String)
+DELETE         /api/v1/buildings/:buildingId                        controllers.glance.TrackBuilding.delete(buildingId:String)
+POST           /api/v1/buildings/:buildingId/:floorId               controllers.glance.TrackBuilding.addFloor(buildingId:String,floorId:String)
+DELETE         /api/v1/buildings/:buildingId/:floorId               controllers.glance.TrackBuilding.removeFloorIdOnly(buildingId:String,floorId:String)
+DELETE         /api/v1/buildings/:buildingId/:floorId/all           controllers.glance.TrackBuilding.removeFloor(buildingId:String,floorId:String)
+
+
+#Glance Tracking Campus Info
+GET            /api/v1/template/trackcampuses                       controllers.glance.TrackCampus.trackCampusTemplate
+GET            /api/v1/trackcampuses/all                            controllers.glance.TrackCampus.getAllInfo
+GET            /api/v1/trackcampuses/:campusId                      controllers.glance.TrackCampus.readCampusWithBuildingsWithFloors(campusId:String)
+GET            /api/v1/trackcampuses                                controllers.glance.TrackCampus.getAll
+POST           /api/v1/trackcampuses                                controllers.glance.TrackCampus.add
+POST           /api/v1/trackcampuses/:campusId                      controllers.glance.TrackCampus.update(campusId:String)
+DELETE         /api/v1/trackcampuses/:campusId                      controllers.glance.TrackCampus.delete(campusId:String)
+POST           /api/v1/trackcampuses/:campusId/:buildingId          controllers.glance.TrackCampus.addBuilding(campusId:String,buildingId:String)
+DELETE         /api/v1/trackcampuses/:campusId/:buildingId          controllers.glance.TrackCampus.removeBuildingIdOnly(campusId:String,buildingId:String)
+DELETE         /api/v1/trackcampuses/:campusId/:buildingId/all      controllers.glance.TrackCampus.removeBuilding(campusId:String,buildingId:String)
+
+#rename campuses API
+#Glance Tracking Campus Info
+GET            /api/v1/template/campuses                            controllers.glance.TrackCampus.trackCampusTemplate
+GET            /api/v1/campuses/all                                 controllers.glance.TrackCampus.getAllInfo
+GET            /api/v1/campuses/:campusId                           controllers.glance.TrackCampus.readCampusWithBuildingsWithFloors(campusId:String)
+GET            /api/v1/campuses                                     controllers.glance.TrackCampus.getAll
+POST           /api/v1/campuses                                     controllers.glance.TrackCampus.add
+POST           /api/v1/campuses/:campusId                           controllers.glance.TrackCampus.update(campusId:String)
+#pure to delete the record..
+DELETE         /api/v1/campuses/:campusId                           controllers.glance.TrackCampus.delete(campusId:String)
+#delete and clean server id assicate
+POST           /api/v1/campuses/:campusId/:buildingId               controllers.glance.TrackCampus.addBuilding(campusId:String,buildingId:String)
+DELETE         /api/v1/campuses/:campusId/:buildingId               controllers.glance.TrackCampus.removeBuildingIdOnly(campusId:String,buildingId:String)
+DELETE         /api/v1/campuses/:campusId/:buildingId/all           controllers.glance.TrackCampus.removeBuilding(campusId:String,buildingId:String)
+
+#Rename Glance Tracking Campus Info
+GET            /api/v1/template/campus                              controllers.glance.TrackCampus.trackCampusTemplate
+GET            /api/v1/campuses/all                                 controllers.glance.TrackCampus.getAllInfo
+GET            /api/v1/campuses/:campusId                           controllers.glance.TrackCampus.readCampusWithBuildingsWithFloors(campusId:String)
+GET            /api/v1/campuses                                     controllers.glance.TrackCampus.getAll
+POST           /api/v1/campuses                                     controllers.glance.TrackCampus.add
+POST           /api/v1/campuses/:campusId                           controllers.glance.TrackCampus.update(campusId:String)
+DELETE         /api/v1/campuese/:campusId                           controllers.glance.TrackCampus.delete(campusId:String)
+POST           /api/v1/campuses/:campusId/:buildingId               controllers.glance.TrackCampus.addBuilding(campusId:String,buildingId:String)
+DELETE         /api/v1/campuses/:campusId/:buildingId               controllers.glance.TrackCampus.removeBuilding(campusId:String,buildingId:String)
+
+#Glance Screen
+GET           /api/v1/template/screentrackfloors                    controllers.glance.ScreenToTrackerFloor.screenToTrackerFloorTemplate
+GET           /api/v1/screentrackfloors                             controllers.glance.ScreenToTrackerFloor.getAll
+GET           /api/v1/screentrackfloors/:screenId                   controllers.glance.ScreenToTrackerFloor.getByScreenId(screenId:String)
+POST          /api/v1/screentrackfloors                             controllers.glance.ScreenToTrackerFloor.add
+POST          /api/v1/screentrackfloors/device_as_screen/:floor_id_or_name   controllers.glance.ScreenToTrackerFloor.registerScreenDevice(floor_id_or_name:String)
+GET           /api/v1/screentrackfloors/device_as_screen/:floor_id_or_name   controllers.glance.ScreenToTrackerFloor.registerScreenDeviceByGet(floor_id_or_name:String)
+GET           /screen_at/:floor_id_or_name                          controllers.glance.ScreenToTrackerFloor.registerScreenDeviceByGet(floor_id_or_name:String)
+
+#Glance Interest Point API
+GET           /api/v1/template/interestpoints                       controllers.glance.InterestPoints.InterestPointTemplate
+POST          /api/v1/interestpoints                                controllers.glance.InterestPoints.add
+GET           /api/v1/interestpoints                                controllers.glance.InterestPoints.getAll
+GET           /api/v1/interestpoints/byfloor/:floorIdName           controllers.glance.InterestPoints.readByFloorId(floorIdName:String)
+DELETE        /api/v1/interestpoints/byid/:interestPointId          controllers.glance.InterestPoints.deleteInterestPointById(interestPointId:String)
+DELETE        /api/v1/interestpoints/byfloor/:floorIdName           controllers.glance.InterestPoints.deleteInterestPointByFloor(floorIdName:String)
+
+#Glance Access Point API
+GET           /api/v1/template/accesspoints                         controllers.glance.GlanceAPController.AccessPointTemplate
+POST          /api/v1/accesspoints                                  controllers.glance.GlanceAPController.add
+GET           /api/v1/accesspoints                                  controllers.glance.GlanceAPController.getAll
+GET           /api/v1/accesspoints/connected                        controllers.glance.GlanceAPController.getAllDevices
+GET           /api/v1/accesspoints/byfloor/:floorIdName             controllers.glance.GlanceAPController.readDevicesByFloorId(floorIdName:String)
+DELETE        /api/v1/accesspoints/byid/:accesstPointId             controllers.glance.GlanceAPController.deleteAccessPointById(accesstPointId:String)
+DELETE        /api/v1/accesspoints/byfloor/:floorIdName             controllers.glance.GlanceAPController.deleteAccessPointByFloor(floorIdName:String)
+
+#Glance IP Mapping Query for Meraki and Other device...
+GET           /api/v1/query/ipcache                                 controllers.glance.GlanceIPMapping.getCachedIPMapping
+GET           /api/v1/query/ip/:macAddress                          controllers.glance.GlanceIPMapping.getIPByMac(macAddress:String)
+GET           /api/v1/query/info/:macAddress                        controllers.glance.GlanceIPMapping.getMacInfo(macAddress:String)
+
+#Glance QR Code Generator
+GET           /api/v1/qrcode/:fileName                              controllers.glance.qrcode.GlanceQRGenerator.getQRCode(fileName:String)
+GET           /api/v1/navigation/qrcode                             controllers.glance.qrcode.GlanceQRGenerator.navigationQRCode
+POST          /api/v1/qrcode                                        controllers.glance.qrcode.GlanceQRGenerator.qrGenerate
+
+#Glance Guest CheckIn
+
+GET           /api/v1/guest/checkin/:guestId                        controllers.glance.guestaccess.GuestCheckIn.guestCheckIn(guestId:String)
+POST          /api/v1/guest/selfregistraion                         controllers.glance.guestaccess.GuestCheckIn.guestSelfCheckInWithoutPhoto
+
+##please comment for release Test API ....
+#GET           /api/v1/guest/testpost/:guestId/:macAddress           controllers.glance.guestaccess.GuestCheckIn.testGet(guestId:String,macAddress:String)
+#POST          /api/v1/guest/testpost/:guestId/:macAddress           controllers.glance.guestaccess.GuestCheckIn.testPost(guestId:String,macAddress:String)
+
+#SMS Notification API
+POST          /api/v1/sms/:phone_number                             controllers.glance.Notification.sendSmsViaBody(phone_number: String)
+GET           /api/v1/message/sms/:phone_number/:msg                controllers.glance.Notification.sendSms(phone_number: String,msg: String)
+POST          /api/v1/message/sms/:phone_number/:msg                controllers.glance.Notification.sendSms(phone_number: String,msg: String)
+GET           /api/v1/message/voice/:phone_number/:msg              controllers.glance.Notification.sendVoice(phone_number: String,msg: String)
+POST          /api/v1/message/voice/:phone_number/:msg              controllers.glance.Notification.sendVoice(phone_number: String,msg: String)
+GET           /api/v1/message/msgtouser/:uid/:msg                   controllers.glance.Notification.sendMsgToUser(uid: String,msg: String)
+POST          /api/v1/message/msgtouser/:uid/:msg                   controllers.glance.Notification.sendMsgToUser(uid: String,msg: String)
+
+GET           /api/v1/message/spark/:to/:msg                        controllers.glance.Notification.sendSparkMsg(to: String,msg: String)
+POST          /api/v1/message/spark/:to/:msg                        controllers.glance.Notification.sendSparkMsg(to: String,msg: String)
+GET           /api/v1/message/spark/search/:to/:msg                 controllers.glance.Notification.searchAndSendSparkMsg(to: String,msg: String)
+POST          /api/v1/message/spark/search/:to/:msg                 controllers.glance.Notification.searchAndSendSparkMsg(to: String,msg: String)
+GET           /api/v1/message/spark/search/like/:to/:msg            controllers.glance.Notification.searchLikeAndSendSparkMsg(to: String,msg: String)
+POST          /api/v1/message/spark/search/like/:to/:msg            controllers.glance.Notification.searchLikeAndSendSparkMsg(to: String,msg: String)
+
+GET           /api/v1/message/spark/zone/:zoneNameId/:msg           controllers.glance.Notification.sendSparkMsgToZoneActiveUsers(zoneNameId: String,msg: String)
+POST          /api/v1/message/spark/zone/:zoneNameId/:msg           controllers.glance.Notification.sendSparkMsgToZoneActiveUsers(zoneNameId: String,msg: String)
+
+GET           /api/v1/message/sms/zone/:zoneNameId/:msg             controllers.glance.Notification.sendTropoMsgToZoneActiveUsers(zoneNameId: String,msg: String)
+POST          /api/v1/message/sms/zone/:zoneNameId/:msg             controllers.glance.Notification.sendTropoMsgToZoneActiveUsers(zoneNameId: String,msg: String)
+
+#SMS self registration
+GET           /api/v1/message/register/:phone_number/:msg           controllers.glance.Notification.registerSms(phone_number: String,msg: String)
+POST          /api/v1/message/register/:phone_number/:msg           controllers.glance.Notification.registerSms(phone_number: String,msg: String)
+
+#SMS activation url
+GET           /api/v1/message/activation/:activation_id             controllers.glance.Notification.activation(activation_id:String)
+GET           /activation/:activation_id                            controllers.glance.Notification.activation(activation_id:String)
+
+#Glance Util API
+GET           /api/v1/util/localaddress                             controllers.glance.Common.LocalIPAddress
+GET           /api/v1/util/remoteaddressmac                         controllers.glance.Common.remoteAddressAndMacAddress
+GET           /api/v1/util/showscanid                               controllers.glance.Common.utilShowCurrentVisitorScanningId
+GET           /api/v1/util/logfile                                  controllers.glance.Common.logfile
+GET           /api/v1/util/showstaffinfo                            controllers.glance.Common.showAllCampusInfo
+GET           /api/v1/util/updateregisterTest                       controllers.glance.Common.updateRegisterTest
+GET           /api/v1/util/schemaupgrade                            controllers.glance.Common.dataVersionConverter
+POST          /api/v1/util/schemaupgrade                            controllers.glance.Common.dataVersionConverter
+
+#Glance mongo backup and restore api
+GET           /api/v1/mongo/backup                                  controllers.glance.DatabaseBackup.exportNecessaryMongoInfo
+POST          /api/v1/mongo/restore                                 controllers.glance.DatabaseBackup.restoreNecessaryMongoInfo
+#Glance Administrative API
+POST          /api/backup                                           controllers.glance.console.Backup.restore
+POST          /api/v1/console/backup                                controllers.glance.console.Backup.restore
+GET           /api/v1/console/backup                                controllers.glance.console.Backup.backup
+POST          /api/v1/console/map/register                          controllers.glance.console.Map.register
+POST          /api/v1/map/register                                  controllers.glance.console.Map.register
+GET           /api/v1/map/mapsize/:name                             controllers.glance.console.Map.readMapSize(name:String)
+
+#get map info
+GET           /map/:filename                                        controllers.glance.console.Map.getFile(filename:String)
+
+#Expert Staff checkin
+GET           /check.html                                           controllers.glance.Check.checkPage
+POST          /api/v1/check/:expert_id                              controllers.glance.Check.checkIn(expert_id: String)
+POST          /api/v1/check/direct/:expert_id/:macAddress           controllers.glance.Check.userId_checkIn(expert_id:String,macAddress:String)
+
+DELETE        /api/v1/check/:expert_id                              controllers.glance.Check.checkOut(expert_id: String)
+DELETE        /api/v1/check/:expert_id/byforce                      controllers.glance.Check.checkOutByForce(expert_id: String)
+
+#add Expert info
+POST          /api/v1/experts/add                                   controllers.glance.GlanceUser.add
+POST          /api/v1/expert/:expert_id                             controllers.glance.GlanceUser.update(expert_id: String)
+DELETE        /api/v1/expert/:expert_id                             controllers.glance.GlanceUser.delete(expert_id: String)
+
+# add Device Info with friendly Name
+
+GET           /api/v1/device_alias                                  controllers.glance.GlanceDeviceAliasController.readAll
+POST          /api/v1/device_alias/add                              controllers.glance.GlanceDeviceAliasController.addDeviceAlias
+POST          /api/v1/device_alias/batch                            controllers.glance.console.Backup.uploadDeviceAliasFile
+POST          /api/v1/device_alias/:device_id/:macAddress           controllers.glance.GlanceDeviceAliasController.updateDeviceAlias(device_id:String,macAddress:String)
+POST          /api/v1/device_alias/:device_id                       controllers.glance.GlanceDeviceAliasController.deleteDeviceAlias(device_id:String)
+
+
+
+POST          /api/v1/glanceuser/add                                controllers.glance.GlanceUser.add
+POST          /api/v1/glanceuser/:expert_id                         controllers.glance.GlanceUser.update(expert_id: String)
+
+#update device info by mannual for asset or expert
+#fixme Jun 20 2017.....
+POST          /api/v1/glanceuser/deviceid/:expert_id                controllers.glance.GlanceUser.updateUserDeviceInfo(expert_id: String)
+
+POST          /api/v1/glanceuser/deviceid/:expert_id/:device_id     controllers.glance.GlanceUser.updateMacAddress(expert_id: String,device_id:String)
+#remove device info by mannual for asset or expert
+DELETE        /api/v1/glanceuser/deviceid/:expert_id                controllers.glance.GlanceUser.removeMacAddress(expert_id: String)
+
+#List Expert Info
+GET           /api/v1/experts/:expert_center_id                     controllers.glance.GlanceUser.getAll(expert_center_id: String)
+GET           /api/v1/experts/:expert_center_id/all                 controllers.glance.GlanceUser.getAll(expert_center_id: String)
+
+GET           /api/v1/experts/search/:expert_id                     controllers.glance.GlanceUser.readExpertById(expert_id: String)
+GET           /api/v1/experts/search/name/:expert_name              controllers.glance.GlanceUser.readExpertByName(expert_name: String)
+GET           /api/v1/experts/search/like/:expert_name              controllers.glance.GlanceUser.readExpertByLike(expert_name: String)
+
+GET           /api/v1/experts/search/active/all                     controllers.glance.GlanceUser.readAllActiveUsers
+GET           /api/v1/experts/search/active/:expert_id              controllers.glance.GlanceUser.readActiveExpertById(expert_id: String)
+GET           /api/v1/experts/search/active/name/:expert_name       controllers.glance.GlanceUser.readActiveExpertByName(expert_name: String)
+GET           /api/v1/experts/search/active/like/:expert_name       controllers.glance.GlanceUser.readActiveExpertByLike(expert_name: String)
+
+
+#Facility Images APIs
+
+POST          /api/v1/image/facility                                controllers.glance.Avatar.addFacilityResource
+POST          /api/v1/image/facility/image                          controllers.glance.Avatar.addFacilityImage
+#GET           /api/v1/image/facility/public/:resourceName          controllers.glance.Avatar.downloadCommonFacilityImage(resourceName:String)
+GET           /api/v1/image/facility/:imageCategory/:imageName      controllers.glance.Avatar.downloadFacilityImage(imageCategory:String,imageName:String)
+GET           /api/v1/image/facility                                controllers.glance.Avatar.readAllFacilities
+GET           /api/v1/image/facility/:floorIdName                   controllers.glance.Avatar.readFacilitiesByFloor(floorIdName:String)
+DELETE        /api/v1/image/facility/:floorIdName                   controllers.glance.Avatar.deleteFacilityByFloor(floorIdName:String)
+DELETE        /api/v1/image/facility                                controllers.glance.Avatar.deleteAllFacility
+
+#Image upload
+POST          /api/v1/image/avatar/:expert_id                       controllers.glance.Avatar.upload(expert_id: String)
+POST          /api/v1/image/avatar/small/:expert_id                 controllers.glance.Avatar.uploadSmall(expert_id: String)
+GET           /api/v1/image/avatar/small/:expert_id                 controllers.glance.Avatar.getSmall(expert_id: String)
+GET           /api/v1/image/avatar/large/:expert_id                 controllers.glance.Avatar.getSmall(expert_id: String)
+GET           /api/v1/image/avatar/normal/:expert_id                controllers.glance.Avatar.getNormal(expert_id: String)
+#upload avatar files via zip file...
+POST          /api/v1/image/avatar/zip/normal                       controllers.glance.Avatar.uploadAvatarByBatch
+POST          /api/v1/image/avatar/zip/small                        controllers.glance.Avatar.uploadAvatarByBatch
+POST          /api/v1/image/avatar/zip/large                        controllers.glance.Avatar.uploadAvatarByBatch
+
+
+GET           /image/logo/icon-glance.png                             controllers.glance.Avatar.downloadLogoImage
+GET           /api/v1/image/logo/icon-glance.png                      controllers.glance.Avatar.downloadLogoImage
+GET           /glance/icon-glance.png                                 controllers.glance.Avatar.downloadLogoImageRedirect
+
+GET           /image/bg/bg.png                                      controllers.glance.Avatar.downloadMiscImage(imageCate:String ?="bkg",imageName:String ?="bkg.png")
+GET           /api/v1/image/bg/bg.png                               controllers.glance.Avatar.downloadMiscImage(imageCate:String ?="bkg",imageName:String ?="bkg.png")
+GET           /glance/bg.png                                        controllers.glance.Avatar.downloadMiscImageRedirect(imageCate:String ?="bg",imageName:String ?="bg.png")
+GET           /glance/bg/bg.png                                     controllers.glance.Avatar.downloadMiscImageRedirect(imageCate:String ?="bg",imageName:String ?="bg.png")
+
+GET           /image/logo/companyname                               controllers.glance.Avatar.companyName
+
+GET           /api/v1/logo/companyname                              controllers.glance.Avatar.companyName
+GET           /api/v1/logo/logo.png                                 controllers.glance.Avatar.downloadLogoImage
+
+
+POST          /image/avatar/:expert_id                             controllers.glance.Avatar.upload(expert_id: String)
+#POST          /image/avatar/small/:expert_id                      controllers.glance.Avatar.upload(expert_id: String)
+POST          /image/avatar/small/:expert_id                       controllers.glance.Avatar.uploadSmall(expert_id: String)
+GET           /image/avatar/small/:expert_id                       controllers.glance.Avatar.getSmall(expert_id: String)
+GET           /image/avatar/large/:expert_id                       controllers.glance.Avatar.getSmall(expert_id: String)
+GET           /image/avatar/normal/:expert_id                      controllers.glance.Avatar.getNormal(expert_id: String)
+
+# add for Mock versioimage/avatar/small/guest679075064n
+
+GET           /avatar/:fileName                                    controllers.glance.Avatar.getAvatar(fileName: String)
+POST          /avatar/:expert_id                                   controllers.glance.Avatar.upload(expert_id: String)
+POST          /avatar/small/:expert_id                             controllers.glance.Avatar.uploadSmall(expert_id: String)
+GET           /avatar/small/:expert_id                             controllers.glance.Avatar.getSmall(expert_id: String)
+GET           /avatar/normal/:expert_id                            controllers.glance.Avatar.getNormal(expert_id: String)
+
+#Recognition Function
+POST          /api/v1/handwriting/recognize                        controllers.glance.Recognition.recognize
+
+#Glance Analytise Function
+GET           /api/v1/visitors/count                               controllers.glance.Visitor.count
+GET           /api/v1/visitors/active/count                        controllers.glance.Visitor.activeDevicesCount
+GET           /api/v1/visitors/active/count/zones                  controllers.glance.Visitor.activeDevicesCountByZones
+GET           /api/v1/visitors/active/users/count/zones            controllers.glance.Visitor.activeUsersCountByZones
+GET           /api/v1/visitors/active/users/:zoneId                controllers.glance.Visitor.activeUsersByZone(zoneId:String)
+
+
+#GET          /api/v1/meetinghours/count                           controllers.glance.MeetingHours.count
+GET           /api/v1/visitors/statistics/:floorIdName             controllers.glance.Visitor.getVisitorsByHours(floorIdName:String)
+GET           /api/v1/visitors/statistics                          controllers.glance.Visitor.getVisitorsByHours(floorIdName:String="")
+GET           /api/v1/useractivity/statistics/:category            controllers.glance.UserActivity.getVisitorsByHours(category:String,floorIdName:String="")
+GET           /api/v1/visitors/heatmap/:category                   controllers.glance.Visitor.getHeatmapOfVisitors(category:String)
+GET           /api/v1/visitors/heatmapZoneAPI/:category            controllers.glance.Visitor.getHeatmapOfVisitorsByZonesAPI(category:String)
+GET           /api/v1/visitors/ipmapping                           controllers.glance.Visitor.readIPMappingAsVisitors
+
+#Web Socket management
+GET           /glance                                              controllers.Application.glanceWS
+#GET          /wsStatefull                                         controllers.Application.statefullWs
+#GET          /test                                                controllers.Application.testBroadCast
+#GET          /testStatefull                                       controllers.Application.testBroadCastStatefull
+
+
+#Glance callback Function
+POST          /api/v1/callback/notification/:org_id/:floorId        controllers.glance.callback.GlanceCallback.notification(org_id:String,floorId:String)
+
+POST          /api/v1/callback/meraki/:org_id/:floorId              controllers.glance.callback.GlanceCallback.merakiNotification(org_id:String,floorId:String)
+GET           /api/v1/callback/meraki/:org_id/:floorId              controllers.glance.callback.GlanceCallback.merakiNotificationValidator(org_id:String,floorId:String)
+
+POST          /api/v1/callback/cmd/highlight/:expertId              controllers.glance.callback.GlanceCallback.highLightCallback(expertId:String)
+GET           /api/v1/callback/cmd/highlight/:expertId              controllers.glance.callback.GlanceCallback.highLightCallback(expertId:String)
+POST          /api/v1/callback/cmd/control/:cmdId                   controllers.glance.callback.GlanceCallback.controlCallback(cmdId:String)
+GET           /api/v1/callback/cmd/control/:cmdId                   controllers.glance.callback.GlanceCallback.controlCallback(cmdId:String)
+
+
+#Glance Template file.
+GET           /api/v1/template/glancefile                           controllers.Assets.at(path="/public/templates", file="glance.xlsx")
+#Default Page
+GET           /image/avatar/default/default.png                     controllers.Assets.at(path="/public/avatar", file="default.png")
+#GET          /                                                         controllers.Assets.at(path="/public", file="index.html")
+#GET          /                                                         controllers.Assets.at(path="/public", file="index.html")
+GET           /                                                     controllers.Application.home
+GET           /index.html                                           controllers.Application.home
+GET           /admin.html                                           controllers.Application.admin
+#admin pages
+GET           /restoreall.html                                      controllers.Application.restoreAll
+GET           /facilityimage.html                                   controllers.Application.facilityImage
+GET           /facilitylogo.html                                    controllers.Application.facilityLogo
+GET           /facilitybg.html                                      controllers.Application.facilityBG
+GET           /facilityzone.html                                    controllers.Application.facilityZone
+GET           /facilityzoneglancemap.html                           controllers.Application.facilityZoneGlanceMap
+GET           /facility.html                                        controllers.Application.facility
+GET           /avatarzips.html                                      controllers.Application.avatarzips
+GET           /settings.html                                        controllers.Application.settings
+GET           /updatetitle.html                                     controllers.Application.updateTitle
+GET           /updatetenantid.html                                  controllers.Application.updateTenantId
+
+GET           /zonebroadcasting.html                                controllers.Application.zoneBroadcasting
+GET           /updatesecret.html                                    controllers.Application.updateSecret
+GET           /updatetropo.html                                     controllers.Application.updateTropo
+GET           /updatespark.html                                     controllers.Application.updateSpark
+GET           /updatevalidator.html                                 controllers.Application.updateValidator
+GET           /updatethreshold.html                                 controllers.Application.updateThreshold
+GET           /resetpass.html                                       controllers.Application.passReset
+GET           /showtoken.html                                       controllers.Application.showToken
+GET           /onoffanimation.html                                  controllers.Application.onoffAnimation
+GET           /onoffautoprofile.html                                controllers.Application.onoffautoprofile
+GET           /onoffinmemory.html                                   controllers.Application.onoffinmemory
+
+GET           /devicealias.html                                     controllers.Application.deviceAlias
+GET           /adddevicealias.html                                  controllers.Application.addDeviceAlias
+
+
+GET           /login.html                                           controllers.Application.login
+
+GET           /docs/                                                controllers.Application.redirectDocs
+#GET           /swagger.json                                         controllers.ApiHelpController.getResources
+#GET           /swagger.json                                         controllers.ApiHelpController.getResource(path = "/api/v1")
+#GET           /docs/                                                controllers.Assets.versioned(path="/public/swagger-ui",file:Asset="index.html")
+GET           /docs/*file                                           controllers.Assets.versioned(path="/public/swagger-ui",file:Asset)
+#GET           /docs/swagger-ui/*file        controllers.Assets.at(path:String="/public/lib/swagger-ui", file:String)
+#GET           /api-docs/qrcode                                      controllers.ApiHelpController.getResource(path = "/api/v1")
+#Asset Static Files
+# Map static resources from the /public folder to the /assets URL path
+GET           /*file                                                 controllers.Assets.versioned(path="/public", file: Asset)

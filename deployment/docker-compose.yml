@@ -1,0 +1,56 @@
+version: '2'
+services:
+  mongo:
+    image: localhost:5000/glance/mongo:2.0.0.102
+    ports:
+      - "27017:27017"
+
+  rabbitmq:
+    image: localhost:5000/glance/rabbitmq:2.0.0.102
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+      - "4369:4369"
+      - "5671:5671"
+      - "25672:25672"
+    environment:
+      - "RABBITMQ_DEFAULT_USER=glance"
+      - "RABBITMQ_DEFAULT_PASS=ciscoglance123456"
+
+  memcached:
+    image: localhost:5000/glance/memcached:2.0.0.102
+    ports:
+      - "11211:11211"
+  gs1:
+    image: localhost:5000/glance/glancescala:2.0.0.102
+    ports:
+      - "8001:80"
+    depends_on:
+      - mongo
+      - rabbitmq
+      - memcached
+
+  gs2:
+    image: localhost:5000/glance/glancescala:2.0.0.102
+    ports:
+      - "8002:80"
+    depends_on:
+      - mongo
+      - rabbitmq
+      - memcached
+
+  nginx:
+    image: localhost:5000/glance/nginx:2.0.0.102
+    ports:
+      - "80:80"
+    depends_on:
+      - gs1
+      - gs2
+
+  nginxhttps:
+    image: localhost:5000/glance/nginxhttps:2.0.0.102
+    ports:
+      - "443:443"
+    depends_on:
+      - gs1
+      - gs2
