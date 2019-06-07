@@ -1,90 +1,68 @@
 # GLANCE
 
+Glance is an indoor, location-based, application service. It includes 3D maps, indoor path navigation, finding and tracking of people, facilities, and assets, and real-time analysis heat-maps of people and devices. Glance uses Meraki and CMX's back-end location services support. Docker services packaging/deployment scripts and administrative console are also included.
+
 ## Package
 
 Use `./activator assembly` to build your application with jar file output.
 
 ## Build instructions
 
-### Environment requriements
+### Environment requirements
 
-We require these tools in your system to build the project.
+The following tools are required to build the project.
 
 * Java 7/8
 * Scala IDE/TypeSafe activator installed 
     
-    Reference: https://www.scala-lang.org/download/
+  * Reference: https://www.scala-lang.org/download/
     
 * Docker/Docker-Compose installed
 
-Build the project:
+### Build the project
 
-1)Go to folder:
-
-    deployment/docker
+1. Go to folder: [deployment/docker](./deployment/docker)
     
-2)Run:
+2. Run: `source ./build.sh`
 
-    Source ./build.sh
+3. Go to folder: [deployment/docker](./deployment/docker)
 
-3)Go to folder:
+4. Run: `source ./glance_allbuild.sh 2.0.0.102 localhost`
+   
+   * Target version: 2.0.0.102, docker repository host: localhost
 
-    deployment/docker
+## Test the Services
 
-4)Run:(target version: 2.0.0.102, docker repository host: localhost)
-
-  source ./glance_allbuild.sh 2.0.0.102 localhost
-
-Test the Services:
-
-Start:
-  Docker-Compose up -d
+Start: `Docker-Compose up -d`
   
-Stop:
-    Docker-Compose down -v
+Stop: `Docker-Compose down -v`
     
-For Debug Mode to run the Glance Project:
-1)Started RabbitMQ, Memcached, MongoDB via "run docker-compose up -d" with comment out gs1,gs2, nginx,nginxhttps docker services"
-2) Run command line at root folder of project:  "./activator run"
+### For Debug Mode to run the Glance Project
 
-Main UI Page of Glance:
+1. Started RabbitMQ, Memcached, MongoDB via `run docker-compose up -d`  with comment out gs1,gs2, nginx, nginxhttps docker services
+2. Run command line at root folder of project:  `./activator run`
 
-http://your_host/#
+### Accessing Pages
 
-Demo only page:
+* Main UI Page of Glance: `http://your_host/#`
+* Demo only page: `http://your_host/?DEMO#`
+* Administrator console: `http://your_host/settings.html`  
 
-http://your_host/?DEMO#
+### Accessing Pages in Debug Mode
 
-Administrator console:
+* Main UI Page of Glance (in debug mode): `http://your_host:9000/#`
+* Demo only page (in debug mode): `http://your_host:9000/?DEMO#`
+* Administrator console: `http://your_host:9000/settings.html` 
 
-http://your_host/settings.html  
+### Default user account: admin/2016Admin4Lowe
 
-Debug Mode:
+## UI
 
-Main UI Page of Glance:
+* https://github.com/CiscoDevNet/Glance/blob/master/glance_main.png
+* https://github.com/CiscoDevNet/Glance/blob/master/glance_admin.png
 
-http://your_host:9000/#
+## US Patents
 
-Demo only page:
-
-http://your_host:9000/?DEMO#
-
-Administrator console:
-
-http://your_host:9000/settings.html  
-
-Default user account: admin/2016Admin4Lowe
-
-
-UI:
-
-https://github.com/CiscoDevNet/Glance/blob/master/glance_main.png
-
-https://github.com/CiscoDevNet/Glance/blob/master/glance_admin.png
-
-
-US Patent includes:
-
-https://patents.justia.com/patent/10152548
+* https://patents.justia.com/patent/10152548
 
 
