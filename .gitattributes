@@ -1,0 +1,2 @@
+* linguist-vendored
+*.scala linguist-vendored=false
