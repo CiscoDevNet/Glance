@@ -1,0 +1,3 @@
+ready.test/ready.js
+ui.test/view-basic.js
+ui.test/view-define.js

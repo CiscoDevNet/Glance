@@ -1,0 +1,370 @@
+{
+    "version": "2.0",
+    "secret": "yourmerakinetwork secret",
+    "type": "DevicesSeen",
+    "data": {
+        "apMac": "88:15:44:60:F4:60",
+        "apFloors": [
+            "Yourmerakinetwork floor Id"
+        ],
+        "apTags": [
+            "",
+            "iTalkE",
+            ""
+        ],
+        "observations": [
+            {
+                "ipv4": null,
+                "location": {
+                    "lat": 31.272467386294355,
+                    "lng": 121.4590669060392,
+                    "unc": 34.87214310638062,
+                    "x": [
+                        9.936150721127545
+                    ],
+                    "y": [
+                        1.8809396993755274
+                    ]
+                },
+                "seenTime": "2017-01-25T08:45:06Z",
+                "ssid": null,
+                "os": null,
+                "clientMac": "64:cc:2e:bd:45:3a",
+                "seenEpoch": 1485333906,
+                "rssi": 22,
+                "ipv6": null,
+                "manufacturer": "Xiaomi Communications"
+            },
+            {
+                "ipv4": null,
+                "location": {
+                    "lat": 31.272467386294355,
+                    "lng": 121.4590669060392,
+                    "unc": 39.24836938413554,
+                    "x": [
+                        9.936150721127545
+                    ],
+                    "y": [
+                        1.8809396993755274
+                    ]
+                },
+                "seenTime": "2017-01-25T08:45:22Z",
+                "ssid": null,
+                "os": null,
+                "clientMac": "b0:d5:9d:97:fe:93",
+                "seenEpoch": 1485333922,
+                "rssi": 21,
+                "ipv6": null,
+                "manufacturer": "Shenzhen Zowee Technology"
+            },
+            {
+                "ipv4": null,
+                "location": {
+                    "lat": 31.272467386294355,
+                    "lng": 121.4590669060392,
+                    "unc": 37.62225195900063,
+                    "x": [
+                        9.936150721127545
+                    ],
+                    "y": [
+                        1.8809396993755274
+                    ]
+                },
+                "seenTime": "2017-01-25T08:46:02Z",
+                "ssid": null,
+                "os": null,
+                "clientMac": "3c:df:bd:6b:ec:db",
+                "seenEpoch": 1485333962,
+                "rssi": 21,
+                "ipv6": null,
+                "manufacturer": "Huawei Technologies"
+            },
+            {
+                "ipv4": null,
+                "location": {
+                    "lat": 31.272467386294355,
+                    "lng": 121.4590669060392,
+                    "unc": 49,
+                    "x": [
+                        9.936150721127545
+                    ],
+                    "y": [
+                        1.8809396993755274
+                    ]
+                },
+                "seenTime": "2017-01-25T08:45:54Z",
+                "ssid": null,
+                "os": null,
+                "clientMac": "ec:35:86:33:91:90",
+                "seenEpoch": 1485333954,
+                "rssi": 17,
+                "ipv6": null,
+                "manufacturer": "Apple"
+            },
+            {
+                "ipv4": null,
+                "location": {
+                    "lat": 31.272467386294355,
+                    "lng": 121.4590669060392,
+                    "unc": 18.905358527674867,
+                    "x": [
+                        9.936150721127545
+                    ],
+                    "y": [
+                        1.8809396993755274
+                    ]
+                },
+                "seenTime": "2017-01-25T08:45:06Z",
+                "ssid": null,
+                "os": null,
+                "clientMac": "6c:70:9f:48:3a:aa",
+                "seenEpoch": 1485333906,
+                "rssi": 28,
+                "ipv6": null,
+                "manufacturer": "Apple"
+            },
+            {
+                "ipv4": null,
+                "location": {
+                    "lat": 31.272467386294355,
+                    "lng": 121.4590669060392,
+                    "unc": 0.5679143687119323,
+                    "x": [
+                        9.936150721127545
+                    ],
+                    "y": [
+                        1.8809396993755274
+                    ]
+                },
+                "seenTime": "2017-01-25T08:45:58Z",
+                "ssid": null,
+                "os": null,
+                "clientMac": "f0:84:c9:6d:7d:8f",
+                "seenEpoch": 1485333958,
+                "rssi": 50,
+                "ipv6": null,
+                "manufacturer": "zte"
+            },
+            {
+                "ipv4": null,
+                "location": {
+                    "lat": 31.272467386294355,
+                    "lng": 121.4590669060392,
+                    "unc": 6.163655755990699,
+                    "x": [
+                        9.936150721127545
+                    ],
+                    "y": [
+                        1.8809396993755274
+                    ]
+                },
+                "seenTime": "2017-01-25T08:45:12Z",
+                "ssid": null,
+                "os": null,
+                "clientMac": "f0:84:c9:6d:7c:42",
+                "seenEpoch": 1485333912,
+                "rssi": 38,
+                "ipv6": null,
+                "manufacturer": "zte"
+            },
+            {
+                "ipv4": null,
+                "location": {
+                    "lat": 31.272467386294355,
+                    "lng": 121.4590669060392,
+                    "unc": 49,
+                    "x": [
+                        9.936150721127545
+                    ],
+                    "y": [
+                        1.8809396993755274
+                    ]
+                },
+                "seenTime": "2017-01-25T08:45:51Z",
+                "ssid": null,
+                "os": null,
+                "clientMac": "70:14:a6:2e:e0:23",
+                "seenEpoch": 1485333951,
+                "rssi": 17,
+                "ipv6": null,
+                "manufacturer": "Apple"
+            },
+             {
+                "ipv4": null,
+                "location": {
+                    "lat": 31.272467386294355,
+                    "lng": 121.4590669060392,
+                    "unc": 34.87214310638062,
+                    "x": [
+                        102.936150721127545
+                    ],
+                    "y": [
+                        35.8809396993755274
+                    ]
+                },
+                "seenTime": "2017-01-25T08:45:06Z",
+                "ssid": null,
+                "os": null,
+                "clientMac": "64:xx:2e:bd:45:3a",
+                "seenEpoch": 1485333906,
+                "rssi": 22,
+                "ipv6": null,
+                "manufacturer": "Xiaomi Communications"
+            },
+            {
+                "ipv4": null,
+                "location": {
+                    "lat": 31.272467386294355,
+                    "lng": 121.4590669060392,
+                    "unc": 39.24836938413554,
+                    "x": [
+                        89.936150721127545
+                    ],
+                    "y": [
+                        71.8809396993755274
+                    ]
+                },
+                "seenTime": "2017-01-25T08:45:22Z",
+                "ssid": null,
+                "os": null,
+                "clientMac": "b0:xd:9d:97:fe:93",
+                "seenEpoch": 1485333922,
+                "rssi": 21,
+                "ipv6": null,
+                "manufacturer": "Shenzhen Zowee Technology"
+            },
+            {
+                "ipv4": null,
+                "location": {
+                    "lat": 31.272467386294355,
+                    "lng": 121.4590669060392,
+                    "unc": 37.62225195900063,
+                    "x": [
+                        69.936150721127545
+                    ],
+                    "y": [
+                        81.8809396993755274
+                    ]
+                },
+                "seenTime": "2017-01-25T08:46:02Z",
+                "ssid": null,
+                "os": null,
+                "clientMac": "xc:df:bd:6b:ec:db",
+                "seenEpoch": 1485333962,
+                "rssi": 21,
+                "ipv6": null,
+                "manufacturer": "Huawei Technologies"
+            },
+            {
+                "ipv4": null,
+                "location": {
+                    "lat": 31.272467386294355,
+                    "lng": 121.4590669060392,
+                    "unc": 49,
+                    "x": [
+                        99.936150721127545
+                    ],
+                    "y": [
+                        151.8809396993755274
+                    ]
+                },
+                "seenTime": "2017-01-25T08:45:54Z",
+                "ssid": null,
+                "os": null,
+                "clientMac": "xc:35:86:33:91:90",
+                "seenEpoch": 1485333954,
+                "rssi": 17,
+                "ipv6": null,
+                "manufacturer": "Apple"
+            },
+            {
+                "ipv4": null,
+                "location": {
+                    "lat": 31.272467386294355,
+                    "lng": 121.4590669060392,
+                    "unc": 18.905358527674867,
+                    "x": [
+                        49.936150721127545
+                    ],
+                    "y": [
+                        21.8809396993755274
+                    ]
+                },
+                "seenTime": "2017-01-25T08:45:06Z",
+                "ssid": null,
+                "os": null,
+                "clientMac": "xc:70:9f:48:3a:aa",
+                "seenEpoch": 1485333906,
+                "rssi": 28,
+                "ipv6": null,
+                "manufacturer": "Apple"
+            },
+            {
+                "ipv4": null,
+                "location": {
+                    "lat": 31.272467386294355,
+                    "lng": 121.4590669060392,
+                    "unc": 0.5679143687119323,
+                    "x": [
+                        129.936150721127545
+                    ],
+                    "y": [
+                        123.8809396993755274
+                    ]
+                },
+                "seenTime": "2017-01-25T08:45:58Z",
+                "ssid": null,
+                "os": null,
+                "clientMac": "f0:x4:c9:6d:7d:8f",
+                "seenEpoch": 1485333958,
+                "rssi": 50,
+                "ipv6": null,
+                "manufacturer": "zte"
+            },
+            {
+                "ipv4": null,
+                "location": {
+                    "lat": 31.272467386294355,
+                    "lng": 121.4590669060392,
+                    "unc": 6.163655755990699,
+                    "x": [
+                        129.936150721127545
+                    ],
+                    "y": [
+                        131.8809396993755274
+                    ]
+                },
+                "seenTime": "2017-01-25T08:45:12Z",
+                "ssid": null,
+                "os": null,
+                "clientMac": "f0:84:x9:6d:7c:42",
+                "seenEpoch": 1485333912,
+                "rssi": 38,
+                "ipv6": null,
+                "manufacturer": "zte"
+            },
+            {
+                "ipv4": null,
+                "location": {
+                    "lat": 31.272467386294355,
+                    "lng": 121.4590669060392,
+                    "unc": 49,
+                    "x": [
+                        129.936150721127545
+                    ],
+                    "y": [
+                        341.8809396993755274
+                    ]
+                },
+                "seenTime": "2017-01-25T08:45:51Z",
+                "ssid": null,
+                "os": null,
+                "clientMac": "70:14:a6:2e:f0:23",
+                "seenEpoch": 1485333951,
+                "rssi": 17,
+                "ipv6": null,
+                "manufacturer": "Apple"
+            }
+        ]
+    }
+}

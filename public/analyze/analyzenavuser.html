@@ -1,0 +1,27 @@
+<html>
+<head>
+    <link rel="stylesheet" href="./AngularChart/angular-chart.css" />
+</head>
+
+<body ng-app="GlanceApp" id="top">
+<div class="col-lg-6 col-sm-12" id="line-chart" ng-controller="LineCtrl">
+    <div class="panel panel-default">
+        <div class="panel-heading">Number of Active Users By the Hour</div>
+        <div class="panel-body">
+            <canvas id="line" class="chart chart-line ng-isolate-scope"
+                    chart-data="data" chart-labels="labels"
+                    chart-click="onClick" chart-hover="onHover" chart-series="series"
+                    chart-options="options" chart-dataset-override="datasetOverride"
+                    height="522" width="1046" style="display: block; width: 523px; height: 261px;">
+
+            </canvas>
+        </div>
+    </div>
+</div>
+
+<script src="./AngularChart/angular.min.js"></script>
+<script src="./CharJs/Chart.min.js"></script>
+<script src="./AngularChart/angular-chart.js"></script>
+<script src="./AnalyzeExpert.js"></script>
+</body>
+</html>

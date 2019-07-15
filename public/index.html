@@ -1,0 +1,170 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>GLANCE</title>
+
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+
+    <script type="text/javascript" src="lib/threadpool.min.js"></script>
+    <script type="text/javascript" src="lib/jquery-1.11.2.js"></script>
+    <script type="text/javascript" src="lib/qrcode/jquery-qrcode.js"></script>
+    <script type="text/javascript" src="lib/qrcode/qrcode.js"></script>
+    <link rel="stylesheet" type="text/css" href="lib/fonts/fonts.css"></link>
+    <script type="text/javascript" src="lib/gl-matrix.js"></script>
+    <script type="text/javascript" src="lib/typeface/typeface-0.10.js"></script>
+    <script type="text/javascript" src="lib/typeface/CiscoSansBold.js"></script>
+    <script type="text/javascript" src="lib/three/build/three.js"></script>
+
+    <!--NeXt start-->
+    <script type="text/javascript" src="lib/next/build/dist/next-web.min.js"></script>
+    <!--NeXt end-->
+
+    <!-- Page start -->
+    <script type="text/javascript" src="sanvy/ext/ExtraExtrudeGeometry.js"></script>
+    <script type="text/javascript" src="sanvy/benchmark.js"></script>
+    <script type="text/javascript" src="sanvy/Stage.js"></script>
+    <script type="text/javascript" src="sanvy/Object.js"></script>
+    <script type="text/javascript" src="sanvy/Mesh.js"></script>
+    <script type="text/javascript" src="glance/common/Util.js"></script>
+    <script type="text/javascript" src="glance/common/Icon.js"></script>
+    <script type="text/javascript" src="glance/common/IconBackspace.js"></script>
+    <script type="text/javascript" src="glance/common/IconClear.js"></script>
+    <script type="text/javascript" src="glance/common/BoundMixin.js"></script>
+    <script type="text/javascript" src="glance/common/BrandA.js"></script>
+    <script type="text/javascript" src="glance/common/BrandGlance.js"></script>
+    <script type="text/javascript" src="glance/common/LoadingCircle.js"></script>
+    <script type="text/javascript" src="glance/common/Dialog.js"></script>
+    <script type="text/javascript" src="glance/common/DialogUtil.js"></script>
+    <script type="text/javascript" src="glance/icon/BrandGlance.js"></script>
+    <script type="text/javascript" src="glance/routing/Router.js"></script>
+    <script type="text/javascript" src="glance/model/map/MapLoader.js"></script>
+    <script type="text/javascript" src="glance/model/map/MapModel.js"></script>
+    <script type="text/javascript" src="glance/model/ClientModel.js"></script>
+    <script type="text/javascript" src="glance/model/SearchModel.js"></script>
+    <script type="text/javascript" src="glance/model/LocationerModel.js"></script>
+    <script type="text/javascript" src="glance/model/FloorModel.js"></script>
+    <script type="text/javascript" src="glance/model/BuildingModel.js"></script>
+    <script type="text/javascript" src="glance/model/RouteModel.js"></script>
+    <script type="text/javascript" src="glance/model/CampusModel.js"></script>
+    <script type="text/javascript" src="glance/model/WorldModel.js"></script>
+    <script type="text/javascript" src="glance/model/ServerModel.js"></script>
+    <script type="text/javascript" src="glance/model/DevlistModel.js"></script>
+    <script type="text/javascript" src="glance/model/AdminModel.js"></script>
+    <script type="text/javascript" src="glance/service/Api.js"></script>
+    <script type="text/javascript" src="glance/service/Service.js"></script>
+    <script type="text/javascript" src="glance/perspective/search/HandWriter.js"></script>
+    <script type="text/javascript" src="glance/perspective/search/Keyboard.js"></script>
+    <script type="text/javascript" src="glance/perspective/search/InputPanel.js"></script>
+    <script type="text/javascript" src="glance/perspective/search/SearchBox.js"></script>
+    <script type="text/javascript" src="glance/perspective/search/NativeSearchBox.js"></script>
+    <script type="text/javascript" src="glance/perspective/Mark.js"></script>
+    <script type="text/javascript" src="glance/perspective/MarkImage.js"></script>
+    <script type="text/javascript" src="glance/perspective/MarkIcon.js"></script>
+    <script type="text/javascript" src="glance/perspective/MarkLabel.js"></script>
+    <script type="text/javascript" src="glance/perspective/Heater.js"></script>
+    <script type="text/javascript" src="glance/perspective/Shaper.js"></script>
+    <script type="text/javascript" src="glance/perspective/Heatmap3D.js"></script>
+    <script type="text/javascript" src="glance/perspective/Floor.js"></script>
+    <script type="text/javascript" src="glance/perspective/RoutePanel.js"></script>
+    <script type="text/javascript" src="glance/perspective/DialogDevice.js"></script>
+    <script type="text/javascript" src="glance/perspective/DialogDeviceDetail.js"></script>
+    <script type="text/javascript" src="glance/perspective/DialogProfile.js"></script>
+    <script type="text/javascript" src="glance/perspective/DialogProfileDetail.js"></script>
+    <script type="text/javascript" src="glance/perspective/DialogSendMessage.js"></script>
+    <script type="text/javascript" src="glance/perspective/DialogMarkDetail.js"></script>
+    <script type="text/javascript" src="glance/perspective/DialogPortrait.js"></script>
+    <script type="text/javascript" src="glance/perspective/DialogPersonDetail.js"></script>
+    <script type="text/javascript" src="glance/perspective/DialogThingDetail.js"></script>
+    <script type="text/javascript" src="glance/perspective/Header.js"></script>
+    <script type="text/javascript" src="glance/perspective/ControlPanel.js"></script>
+    <script type="text/javascript" src="glance/perspective/ControlPanelBubble.js"></script>
+    <script type="text/javascript" src="glance/perspective/StageControlPanel.js"></script>
+    <script type="text/javascript" src="glance/perspective/Building.js"></script>
+    <script type="text/javascript" src="glance/perspective/World.js"></script>
+    <script type="text/javascript" src="glance/perspective/DEMO.js"></script>
+    <script type="text/javascript" src="glance/perspective/Window.js"></script>
+    <script type="text/javascript" src="glance/paging/Header.js"></script>
+    <script type="text/javascript" src="glance/paging/InfoPanel.js"></script>
+    <script type="text/javascript" src="glance/paging/Page.js"></script>
+    <script type="text/javascript" src="glance/paging/PageSearch.js"></script>
+    <script type="text/javascript" src="glance/paging/PageCheckin.js"></script>
+    <script type="text/javascript" src="glance/paging/PageCheckout.js"></script>
+    <script type="text/javascript" src="glance/paging/Window.js"></script>
+    <script type="text/javascript" src="glance/paging/WindowCheck.js"></script>
+    <script type="text/javascript" src="glance/paging/WindowRegister.js"></script>
+    <script type="text/javascript" src="glance/editor/model/FontModel.js"></script>
+    <script type="text/javascript" src="glance/editor/model/VertexModel.js"></script>
+    <script type="text/javascript" src="glance/editor/model/EdgeModel.js"></script>
+    <script type="text/javascript" src="glance/editor/model/ShapeModel.js"></script>
+    <script type="text/javascript" src="glance/editor/model/SvgStrokeModel.js"></script>
+    <script type="text/javascript" src="glance/editor/model/SvgColorModel.js"></script>
+    <script type="text/javascript" src="glance/editor/model/SvgPathModel.js"></script>
+    <script type="text/javascript" src="glance/editor/model/MapEntranceModel.js"></script>
+    <script type="text/javascript" src="glance/editor/model/MapLabelModel.js"></script>
+    <script type="text/javascript" src="glance/editor/model/MapShapeModel.js"></script>
+    <script type="text/javascript" src="glance/editor/model/MapBarrierModel.js"></script>
+    <script type="text/javascript" src="glance/editor/model/MapWallModel.js"></script>
+    <script type="text/javascript" src="glance/editor/model/MapRegionModel.js"></script>
+    <script type="text/javascript" src="glance/editor/model/MapFacilityModel.js"></script>
+    <script type="text/javascript" src="glance/editor/model/MapModel.js"></script>
+    <script type="text/javascript" src="glance/editor/model/EditorModel.js"></script>
+    <script type="text/javascript" src="glance/editor/interact/Responsor.js"></script>
+    <script type="text/javascript" src="glance/editor/interact/ResponsorOfTemporaryShape.js"></script>
+    <script type="text/javascript" src="glance/editor/interact/ResponsorOnEditor.js"></script>
+    <script type="text/javascript" src="glance/editor/interact/ResponsorOnRegion.js"></script>
+    <script type="text/javascript" src="glance/editor/interact/ResponsorOnWall.js"></script>
+    <script type="text/javascript" src="glance/editor/interact/ResponsorOnBarrier.js"></script>
+    <script type="text/javascript" src="glance/editor/interact/ResponsorOnFacility.js"></script>
+    <script type="text/javascript" src="glance/editor/interact/ResponsorOnVertex.js"></script>
+    <script type="text/javascript" src="glance/editor/interact/ResponsorOnEdge.js"></script>
+    <script type="text/javascript" src="glance/editor/interact/ResponsorOnFace.js"></script>
+    <script type="text/javascript" src="glance/editor/interact/ResponsorOnBoundaryIdle.js"></script>
+    <script type="text/javascript" src="glance/editor/interact/ResponsorOnBoundaryWalls.js"></script>
+    <script type="text/javascript" src="glance/editor/interact/ResponsorOnBoundaryRegions.js"></script>
+    <script type="text/javascript" src="glance/editor/interact/ResponsorOnBoundaryBarriers.js"></script>
+    <script type="text/javascript" src="glance/editor/interact/ResponsorOnBoundaryFacilities.js"></script>
+    <script type="text/javascript" src="glance/editor/interact/Interactor.js"></script>
+    <script type="text/javascript" src="glance/editor/interact/InteractManager.js"></script>
+    <script type="text/javascript" src="glance/editor/MapShape.js"></script>
+    <script type="text/javascript" src="glance/editor/MapPathSegment.js"></script>
+    <script type="text/javascript" src="glance/editor/MapPathSegmentL.js"></script>
+    <script type="text/javascript" src="glance/editor/MapPathSegmentA.js"></script>
+    <script type="text/javascript" src="glance/editor/MapPathSegmentC.js"></script>
+    <script type="text/javascript" src="glance/editor/MapPathSegmentM.js"></script>
+    <script type="text/javascript" src="glance/editor/MapPath.js"></script>
+    <script type="text/javascript" src="glance/editor/MapLabel.js"></script>
+    <script type="text/javascript" src="glance/editor/MapBoundary.js"></script>
+    <script type="text/javascript" src="glance/editor/MapBarrier.js"></script>
+    <script type="text/javascript" src="glance/editor/MapWall.js"></script>
+    <script type="text/javascript" src="glance/editor/MapRegion.js"></script>
+    <script type="text/javascript" src="glance/editor/MapFacility.js"></script>
+    <script type="text/javascript" src="glance/editor/MapStage.js"></script>
+    <script type="text/javascript" src="glance/editor/EditorToolbar.js"></script>
+    <script type="text/javascript" src="glance/editor/Editor.js"></script>
+    <script type="text/javascript" src="glance/editor/EditorLoader.js"></script>
+    <script type="text/javascript" src="glance/editor/WindowHeader.js"></script>
+    <script type="text/javascript" src="glance/editor/Window.js"></script>
+    <script type="text/javascript" src="glance/admin/DialogLocationer.js"></script>
+    <script type="text/javascript" src="glance/admin/DialogDevlists.js"></script>
+    <script type="text/javascript" src="glance/admin/AdminFloorConfig.js"></script>
+    <script type="text/javascript" src="glance/admin/AdminFloorMap.js"></script>
+    <script type="text/javascript" src="glance/admin/AdminFloor.js"></script>
+    <script type="text/javascript" src="glance/admin/AdminDevlist.js"></script>
+    <script type="text/javascript" src="glance/admin/NavigatorPageServer.js"></script>
+    <script type="text/javascript" src="glance/admin/NavigatorPageDevice.js"></script>
+    <script type="text/javascript" src="glance/admin/Navigator.js"></script>
+    <script type="text/javascript" src="glance/admin/Header.js"></script>
+    <script type="text/javascript" src="glance/admin/Admin.js"></script>
+    <script type="text/javascript" src="glance/admin/DEMO.js"></script>
+    <script type="text/javascript" src="glance/admin/Window.js"></script>
+    <script type="text/javascript" src="glance/Application.js"></script>
+    <!-- Page end -->
+
+</head>
+
+<body>
+</body>
+
+</html>

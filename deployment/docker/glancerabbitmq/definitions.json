@@ -1,0 +1,13 @@
+{
+  "exchanges": [
+    {
+      "name": "glance.exchange.data",
+      "vhost": "/",
+      "type": "fanout",
+      "durable": true,
+      "auto_delete": false,
+      "internal": false,
+      "arguments": {}
+    }
+  ]
+}

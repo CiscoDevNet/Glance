@@ -1,0 +1,170 @@
+/*==simple reset==*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font: 12px/1.5 "Tahoma";
+}
+
+.l {
+    float: left;
+}
+
+.r {
+    float: right;
+}
+
+.clfix:before,
+.clfix:after {
+    content: " ";
+    display: table;
+}
+
+.clfix:after {
+    clear: both;
+}
+
+/*==module==*/
+.wrap {
+    padding-top: 20px;
+    margin: 0 auto;
+}
+
+.frm1 {
+    width: 600px;
+    padding: 10px;
+    background: #eee;
+}
+
+.frm1 p {
+    line-height: 24px;
+    height: 24px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+}
+
+.frm1 p:hover {
+    background: #ddd;
+}
+
+.frm1 p * {
+    float: left;
+}
+
+.frm1 label {
+    width: 120px;
+    margin-right: 5px;
+    font-size: 14px;
+}
+
+.frm1 input,
+.frm1 select,
+.frm1 textarea {
+    width: 440px;
+    height: 22px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 0 5px;
+}
+
+.frm1 textarea {
+    padding: 5px;
+    height: 68px;
+}
+
+.frm1 button {
+    height: 24px;
+    padding: 5px 20px;
+}
+
+.snap-shot {
+    margin-left: 10px;
+}
+.snap-shot img{
+    width:100%;
+}
+
+/*page2*/
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td,
+th {
+    padding: 0;
+}
+
+.sel-campus {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.sel-campus label {
+    width: 120px;
+    margin-right: 5px;
+    font-size: 14px;
+}
+
+.sel-campus select {
+    width: 320px;
+    height: 22px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 0 5px;
+}
+
+.snap-shot2 {
+    width: 380px;
+    margin: 10px auto;
+}
+
+.frm2 {
+    width: 90%;
+    margin: 0 auto;
+}
+.frm2 label{
+    font-weight:bold;
+    width:50px;
+}
+
+.frm2 p{
+    margin:0;
+}
+.frm2 p:hover {
+    background: none;
+}
+
+.frm2 input {
+    width: 90px;
+}
+
+.blank {
+    font-size: 0;
+    overflow: hidden;
+}
+
+.h3 {
+    height: 3px;
+}
+
+.h5 {
+    height: 5px;
+}
+
+.left-bot h2,
+.left-top h2{
+    font-size:14px;
+}
+
+.left-bot{
+    vertical-align: top;
+    background: #eee;
+}

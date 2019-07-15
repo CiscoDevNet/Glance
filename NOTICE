@@ -1,0 +1,62 @@
+Glance Version 2.0
+Copyright 2015-2019 Cisco Systems, Inc.
+
+This product includes code developed by Cisco Systems, Inc.
+
+This product also includes separately copyrighted:
+
+SVG Map image parser bases on  https://stackoverflow.com/questions/26027313/how-to-load-and-parse-svg-documents with org.apache.batik(by Dave Jarvis)
+
+Scala Libraries:
+
+reactivemongo-play-json/play2-reactivemongo(org.reactivemongo)
+
+gson(com.google.code.gson)
+
+akka-actor/akka-slf4j(com.typesafe.akka)
+
+log4j-core/log4j-to-slf4j(org.apache.logging.log4j)
+
+slick(com.typesafe.slick)
+
+play-slick(com.typesafe.play)
+
+amqp-client(com.rabbitmq)
+
+scrimage-core(com.sksamuel.scrimage)
+
+joda-time(joda-time)
+
+qrgen(net.glxn)
+
+poi-ooxml(org.apache.poi)
+
+scala-async_2.11(org.scala-lang.modules)
+
+shade(com.bionicspirit)
+
+xml-apis/xml-apis-ext(xml-apis)
+
+scala-bcrypt(com.github.t3hnar)
+
+scala-uri(io.lemonlabs)
+
+batik-bridge/batik-transcoder/batik-awt-util/batik-anim/batik-css/batik-dom/batik-ext/batik-gvt/batik-parser/batik-script/batik-svg-dom/batik-svggen/batik-util/batik-xml (org.apache.xmlgraphics)
+
+JS UI Libraries:
+jquery          http://jquery.org/license
+
+three.min.js    http://threejs.org/license
+
+SocketIO        https://github.com/socketio/socket.io/blob/master/LICENSE
+
+Threadpool.min.js   https://github.com/andywer/threadpool-js/blob/master/LICENSE
+
+glMatrix.js     https://github.com/toji/gl-matrix/blob/master/LICENSE.md
+
+jrange.js   http://jquery.org/license
+
+qrcode.js   http://www.d-project.com/
+
+typeface.js  http://typefacejs.neocracy.org
+
