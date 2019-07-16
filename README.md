@@ -1,6 +1,6 @@
 # GLANCE
 
-Glance is an indoor, location-based, application service. It includes 3D maps, indoor path navigation, finding and tracking of people, facilities, and assets, and real-time analysis heat-maps of people and devices. Glance uses Cisco Meraki/CMX wireless indoor positioning system support. Docker services packaging/deployment scripts and administrative console are also included.
+Glance is an indoor, location-based, application service. It includes 3D maps, indoor path navigation, finding and tracking of people, facilities, and assets, and real-time analysis heat-maps of people and devices. Glance leverages Cisco Meraki/CMX wireless indoor positioning system sdk. Docker services packaging/deployment scripts and administrative console are also included.
 
 ## Package
 
