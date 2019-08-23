@@ -2,6 +2,11 @@
 
 Glance is an indoor, location-based, application service. It includes 3D maps, indoor path navigation, finding and tracking of people, facilities, and assets, and real-time analysis heat-maps of people and devices. Glance leverages Cisco Meraki/CMX wireless indoor positioning system sdk. Docker services packaging/deployment scripts and administrative console are also included.
 
+![Glance](./Glance.png)
+
+Live Demo Link: http://ec2-52-10-142-148.us-west-2.compute.amazonaws.com/#
+
+
 ## Package
 
 Use `./activator assembly` to build your application with jar file output.
@@ -61,8 +66,5 @@ Stop: `Docker-Compose down -v`
 * https://github.com/CiscoDevNet/Glance/blob/master/glance_main.png
 * https://github.com/CiscoDevNet/Glance/blob/master/glance_admin.png
 
-## US Patents
-
-* https://patents.justia.com/patent/10152548
 
 
