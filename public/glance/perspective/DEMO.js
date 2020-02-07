@@ -53,13 +53,14 @@
             },
             run: function(app, service) {
                 // prepare for demo data
-                var WIDTH = 796;
-                var HEIGHT = 576;
+                var WIDTH = 4086;
+                var HEIGHT = 2401;
                 var register, join, movement;
                 floors = [{
                     floorId: "floor-glance", //
                     floorName: "",
-                    mapName: "target-map"
+                    mapName: "starbucks"
+                    // mapName: "target-map"
                 }];
                 floors_stadium = [{
                     floorId: "floor-statium",
