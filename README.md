@@ -9,7 +9,7 @@ Live Demo Link: http://ec2-52-10-142-148.us-west-2.compute.amazonaws.com/#
 
 ## Package
 
-Use `./activator assembly` to build your application with jar file output.
+Use `./activator assembly` or `sbt assembly` to build your application with jar file output.
 
 ## Build instructions
 
@@ -45,7 +45,7 @@ Stop: `Docker-Compose down -v`
 ### For Debug Mode to run the Glance Project
 
 1. Started RabbitMQ, Memcached, MongoDB via `run docker-compose up -d`  with comment out gs1,gs2, nginx, nginxhttps docker services
-2. Run command line at root folder of project:  `./activator run`
+2. Run command line at root folder of project:  `./activator run` or `sbt run` 
 
 ### Accessing Pages
 
