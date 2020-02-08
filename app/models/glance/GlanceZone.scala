@@ -1,32 +1,38 @@
 package models.glance
 
 import java.util.{Date, UUID}
-
+import utils.{ComUtils, GlanceLoc}
 import com.sksamuel.scrimage.RGBColor
 import controllers.amqp.{GlanceSyncProducer, GlanceSyncCache}
-import controllers.glance.GlanceWebSocketActor
-//import models._
+import java.util.UUID
+import utils.ComUtils
+import controllers.amqp.{GlanceSyncProducer, GlanceSyncCache}
+import models._
 import models.cmx.Implicits._
 import models.cmx.{MapCoordinate, Zone}
 import play.Logger
 import play.api.Play.current
-import play.api.libs.iteratee.Enumerator
-import play.modules.reactivemongo.ReactiveMongoPlugin
+import reactivemongo.core.commands.{LastError, Count}
 import play.modules.reactivemongo.json.collection.JSONCollection
 import reactivemongo.bson.BSONObjectID
-import reactivemongo.core.commands.{Count, LastError}
+import reactivemongo.bson.BSONDocument
+import play.modules.reactivemongo.json.BSONFormats._
+import services.cisco.database.GlanceDBService
+import services.security.GlanceCredential
+import play.api.libs.json._
+import play.api.libs.functional.syntax._
+import reactivemongo.bson._
 import services.cisco.database.GlanceDBService
 import services.cisco.notification.NotificationService
 import services.security.GlanceCredential
-import utils.{ComUtils, GlanceLoc}
-
 import scala.collection.mutable
 import scala.collection.mutable.MutableList
 import scala.concurrent.{Await, Promise, Future}
 import scala.util.Random
-import reactivemongo.play.json._
 import scala.concurrent.duration._
-
+import play.api.libs.iteratee.Enumerator
+import reactivemongo.core.commands.{Count, LastError}
+//import reactivemongo.play.json._
 
 
 /**
@@ -52,8 +58,8 @@ case class GlanceZone (_id: BSONObjectID = BSONObjectID.generate,
 object GlanceZone {
   def collection = GlanceDBService.GlanceDB().collection[JSONCollection]("glanceZone")
 
-  import play.api.libs.json._
-  import reactivemongo.bson._
+  //import play.api.libs.json._
+  //import reactivemongo.bson._
 
   import scala.concurrent.ExecutionContext.Implicits.global
   val CACHE_NAME="glanceZone"
@@ -366,6 +372,7 @@ object GlanceZone {
 
   def readAllConf(glanceOrgId:String):Future[List[GlanceZone]] ={
     val findByOrgUserId  = (org: String) => GlanceZone.collection.find(Json.obj(ComUtils.CONST_PROPERTY_GLANCEORGID -> org)).sort(Json.obj(ComUtils.CONST_PROPERTY_FLOORID -> 1,ComUtils.CONST_PROPERTY_ZONENAME -> 1)).cursor[GlanceZone].collect[List]();
+
     val optZones =GlanceSyncCache.getGlanceCache[List[GlanceZone]](CACHE_NAME)
     if(optZones.isDefined) {
       Future { optZones.get }

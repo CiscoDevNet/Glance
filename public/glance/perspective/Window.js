@@ -279,9 +279,9 @@
                                 if (zone.zoneCoordinate && zone.zoneCoordinate.length > 2) {
                                     model.onlines().push(EXPORT.getZoneClientByZoneData(bdata.buildingId, fdata.floorId, zone));
                                 }
-                                if (zone.zoneCoordinate && zone.zoneCoordinate.length > 2) {
-                                    model.onlines().push(EXPORT.getNonStandardizedZoneClient(bdata.buildingId, fdata.floorId, zone));
-                                }
+                                //if (zone.zoneCoordinate && zone.zoneCoordinate.length > 2) {
+                                //    model.onlines().push(EXPORT.getNonStandardizedZoneClient(bdata.buildingId, fdata.floorId, zone));
+                                //}
                             });
                         }
                         if (fdata.facilities) {
