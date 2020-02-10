@@ -20,7 +20,7 @@ The following tools are required to build the project.
 * Java 7/8
 * Scala IDE/TypeSafe activator installed 
     
-  * Reference: https://www.scala-lang.org/download/
+  * Reference: https://www.scala-lang.org/download/  and https://www.scala-sbt.org/1.x/docs/Getting-Started.html
     
 * Docker/Docker-Compose installed
 
