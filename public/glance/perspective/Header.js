@@ -69,7 +69,7 @@
                     "right": "4em",
                     "top": "0",
                     "height": "4em",
-                    //"background": "linear-gradient(to right, rgba(255,255,255,.1), rgba(255,255,255,.05) 70%, rgba(255,255,255,.1))",
+                    // "background": "linear-gradient(to right, rgba(255,255,255,.1), rgba(255,255,255,.05) 70%, rgba(255,255,255,.1))",
                     "border-bottom": "1px solid #f1f1f1",
                     "color": "black",
                     "display": "flex"
@@ -89,7 +89,7 @@
                 ".glance-perspective-header > .brand > .brand-glance-slogan": {
                     "vertical-align": "bottom",
                     "line-height": "2em",
-                    "color": "#cd0101",
+                    "color": "#ececec",
                     "font-size": "1.2em",
                     "font-family": "Helvetica Neue",
                     "font-weight": "600",
@@ -104,7 +104,7 @@
                     "font-size": ".67em",
                     "font-family": "CiscoSans",
                     "font-weight": "100",
-                    "color": "#777"
+                    "color": "#ececec"
                 },
                 ".glance-perspective-header > .info + .info:before": {
                     "content": " ",
@@ -144,7 +144,7 @@
                     })
                 },
                 ".glance-perspective-header > .indicator": {
-                    "background": "#cd0101",
+                    "background": "#333",
                     "flex-basis": "6rem",
                     "flex-grow": "0",
                     "line-height": "6rem",

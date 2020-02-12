@@ -49,7 +49,7 @@
                                             color: 0xeeeeee,
                                             specular: 0x050505,
                                             transparent: true,
-                                            opacity: .6,
+                                            opacity: .3,
                                             side: THREE.DoubleSide
                                         });
                                     }
@@ -78,7 +78,7 @@
                             color && async.set(new THREE.MeshPhongMaterial({
                                 color: 0xffffff,
                                 transparent: true,
-                                opacity: .5,
+                                opacity: .6,
                                 side: THREE.DoubleSide
                             }));
                         })

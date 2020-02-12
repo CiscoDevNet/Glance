@@ -104,20 +104,20 @@
                     "height": "2em",
                     "line-height": "2.3em",
                     "min-width": "2em",
-                    "border": ".1em solid #cd0101",
-                    "color": "#cd0101",
+                    "border": ".1em solid #00bab0",
+                    "color": "#00bab0",
                     "cursor": "default"
                 },
                 ".glance-stage-control > .group > .button.check-true": {
                     "color": "white !important",
-                    "background": "#cd0101 !important"
+                    "background": "#00bab0 !important"
                 },
                 ".glance-stage-control > .group > .button:hover": {
                     "background": "rgba(0,0,0,.05)"
                 },
                 ".glance-stage-control > .group > .button:active": {
                     "color": "white",
-                    "background": "#cd0101"
+                    "background": "#00bab0"
                 },
                 ".glance-stage-control > .group-button > .button:not(:first-child)": {
                     "margin-left": "-.1em"
@@ -149,8 +149,8 @@
                     "text-align": "center",
                     "line-height": "2.3em",
                     "width": "2em",
-                    "border": ".1em solid #cd0101",
-                    "color": "#cd0101",
+                    "border": ".1em solid #00bab0",
+                    "color": "#00bab0",
                     "cursor": "default"
                 },
                 ".glance-stage-control > .group-vertical > :not(:first-child)": {
@@ -181,7 +181,7 @@
                     "content": " ",
                     "nx:absolute": ".5em auto",
                     "width": ".1em",
-                    "background": "#cd0101"
+                    "background": "#00bab0"
                 },
                 ".glance-stage-control > .group-vertical > .zoom > .zooming": {
                     "nx:absolute": "0",
@@ -194,7 +194,7 @@
                 ".glance-stage-control > .group-vertical > .zoom > .zooming:before": {
                     "content": " ",
                     "nx:absolute": "0",
-                    "background": "#cd0101"
+                    "background": "#00bab0"
                 }
             })
         }

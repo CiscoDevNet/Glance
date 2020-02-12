@@ -114,10 +114,10 @@
                     "display": "inline"
                 },
                 ".input-panel.input-method-hand .input-switcher-hand": {
-                    "color": "#cd0101"
+                    "color": "#00bab0"
                 },
                 ".input-panel.input-method-keyboard .input-switcher-keyboard": {
-                    "color": "#cd0101"
+                    "color": "#00bab0"
                 },
                 ".input-panel > .matched-list-container": {
                     "position": "absolute",

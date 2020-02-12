@@ -4,7 +4,10 @@
             cssclass: "glance-control-panel",
             content: [{
                 type: "glance.common.BrandA",
-                cssclass: "brand"
+                cssclass: "brand",
+                properties: {
+                    color: "#00bab0"
+                }
             }, {
                 cssclass: "sign",
                 cssstyle: {
@@ -334,7 +337,7 @@
                     "top": "0",
                     "bottom": "0",
                     "width": "4em",
-                    "border-left": "1px solid #f1f1f1",
+                    "border-left": "1px solid #01bab1",
                     "display": "flex",
                     "flex-direction": "column",
                     "justify-content": "space-between"
@@ -353,12 +356,12 @@
                     "nx:size": "4em",
                     "box-sizing": "border-box",
                     "text-align": "center",
-                    "border": "1px solid #f1f1f1",
+                    "border": "1px solid #01bab1",
                     "border-radius": ".2em"
                 },
                 ".glance-control-panel > .sign:active:before": {
                     "content": " ",
-                    "background": "#cd0101",
+                    "background": "#00bab0",
                     "nx:absolute": "3px"
                 },
                 ".glance-control-panel > .sign:after": {
@@ -366,11 +369,11 @@
                     "nx:absolute": "3px",
                     "font-size": "1.8em",
                     "line-height": "2.1em",
-                    "color": "#cd0101",
+                    "color": "#00bab0",
                     "font-family": "FontAwesome"
                 },
                 ".glance-control-panel > .sign:active:after": {
-                    "color": "white"
+                    "color": "#00bab0"
                 },
                 ".glance-control-panel > .display-mode": {
                     "flex-grow": "1",
@@ -382,12 +385,12 @@
                     "position": "relative",
                     "border-width": "0 0 1px 0",
                     "border-style": "solid",
-                    "border-color": "#f1f1f1",
+                    "border-color": "#01bab1",
                     "margin": "-1px 0 0 0",
                     "height": "4em",
                     "text-align": "center",
                     "cursor": "default",
-                    "color": "#cd0101"
+                    "color": "#00bab0"
                 },
                 ".glance-control-panel > .display-mode > .button:first-child": {
                     "border-width": "1px 0"
@@ -395,8 +398,8 @@
                 ".glance-control-panel > .display-mode > .button:focus:before": {
                     "content": " ",
                     "nx:absolute": "-1px",
-                    "background": "#cd0101",
-                    "border-color": "#f1f1f1"
+                    "background": "#00bab0",
+                    "border-color": "#01bab1"
                 },
                 ".glance-control-panel > .display-mode > .button > .label": {
                     "nx:absolute": "3px",
@@ -408,7 +411,7 @@
                     "color": "white"
                 },
                 ".glance-control-panel > .display-mode > .button:not(:focus) > .label": {
-                    "color": "#808080"
+                    "color": "#00bab0"
                 },
                 ".glance-control-panel > .display-mode > .button > .label:before": {
                     "font-family": "FontAwesome",
@@ -421,7 +424,7 @@
                     "margin": "auto"
                 },
                 ".glance-control-panel > .display-mode > .button:not(:focus) > .label:before": {
-                    "color": "#cd0101"
+                    "color": "#00bab0"
                 },
                 ".glance-control-panel > .display-mode > .button.button-people > .label:before": {
                     "content": "\\f21d"
@@ -438,7 +441,7 @@
                 ".glance-control-panel > .display-mode > .button > .bubble": {
                     "nx:absolute": "-0.1em 100% auto auto",
                     "width": "8em",
-                    "border": ".1em solid #cd0101",
+                    "border": ".1em solid #00bab0",
                     "background": "#fff"
                 },
                 ".glance-control-panel > .display-mode > .button:not(:focus) > .bubble": {
@@ -455,14 +458,14 @@
                     "nx:size": "4em",
                     "box-sizing": "border-box",
                     "text-align": "center",
-                    "border-top": "1px solid #f1f1f1"
+                    "border-top": "1px solid #01bab1"
                 },
                 ".glance-control-panel > .search-panel > .search-toggle:after": {
                     "content": "\\f002",
                     "nx:absolute": "3px",
                     "font-size": "1.8em",
                     "line-height": "2.1em",
-                    "color": "#cd0101",
+                    "color": "#00bab0",
                     "font-family": "FontAwesome"
                 },
                 ".glance-control-panel > .search-panel.search-true > .search-toggle:after": {
@@ -470,7 +473,7 @@
                 },
                 ".glance-control-panel > .search-panel.search-true > .search-toggle:before": {
                     "content": " ",
-                    "background": "#cd0101",
+                    "background": "#00bab0",
                     "nx:absolute": "0px"
                 },
                 ".glance-control-panel > .search-panel > .search": {
@@ -577,17 +580,17 @@
                     "position": "relative",
                     "border-width": "1px 0 0",
                     "border-style": "solid",
-                    "border-color": "#f1f1f1",
+                    "border-color": "#01bab1",
                     "height": "4em",
                     "text-align": "center",
                     "cursor": "default",
-                    "color": "#cd0101"
+                    "color": "#00bab0"
                 },
                 ".glance-control-panel > .settings:focus:before": {
                     "content": " ",
                     "nx:absolute": "-1px",
-                    "background": "#cd0101",
-                    "border-color": "#cd0101"
+                    "background": "#00bab0",
+                    "border-color": "#00bab0"
                 },
                 ".glance-control-panel > .settings > .label": {
                     "nx:absolute": "3px",
@@ -613,14 +616,14 @@
                     "margin": "auto"
                 },
                 ".glance-control-panel > .settings:not(:focus) > .label:before": {
-                    "color": "#cd0101"
+                    "color": "#00bab0"
                 },
                 ".glance-control-panel > .settings > .bubble": {
                     "nx:absolute": "auto 100% -0.1em auto",
                     "text-align": "left",
                     "width": "8em",
                     "min-height": "4em",
-                    "border": ".1em solid #cd0101",
+                    "border": ".1em solid #00bab0",
                     "background": "#fff",
                     "font-size": ".8em",
                     "line-height": "1.2em",
@@ -635,7 +638,7 @@
                     "nx:absolute": "auto auto 1.5em 100%",
                     "border-width": ".5em",
                     "border-style": "solid",
-                    "border-color": "transparent transparent transparent white"
+                    "border-color": "transparent transparent transparent #00bab0"
                 },
                 ".glance-control-panel > .settings > .bubble > .zoom-bar": {
                     "margin-top": ".2em",
@@ -648,7 +651,7 @@
                 },
                 ".glance-control-panel > .settings > .bubble > .zoom-bar > .zoom": {
                     "nx:size": "1.2em 1.2em",
-                    "color": "#cd0101",
+                    "color": "#00bab0",
                     "cursor": "pointer"
                 },
                 ".glance-control-panel > .settings > .bubble > .zoom-bar > .zoom-in": {

@@ -34,7 +34,7 @@
                     "font-size": ".5em",
                     "line-height": "2em",
                     "padding": ".3em",
-                    "color": "#cd0101",
+                    "color": "#00bab0",
                     "text-align": "left"
                 },
                 ".glance-control-panel-bubble > .title": {
@@ -44,7 +44,7 @@
                 ".glance-control-panel-bubble > .item": {
                     "margin": ".3em",
                     "padding": "0 .3em",
-                    "border": ".05em solid #cd0101",
+                    "border": ".05em solid #00bab0",
                     "border-radius": ".3em",
                     "background": "#ffffff"
                 },
@@ -54,16 +54,16 @@
                     "margin-top": ".13em"
                 },
                 ".glance-control-panel-bubble > .item:hover": {
-                    "background": "#cd0101",
+                    "background": "#00bab0",
                     "color": "white"
                 },
                 ".glance-control-panel-bubble > .item.active-true": {
-                    "background": "#cd0101",
+                    "background": "#00bab0",
                     "color": "white"
                 },
                 ".glance-control-panel-bubble > .item:before": {
                     "content": "\\f10c",
-                    "color": "#cd0101",
+                    "color": "#00bab0",
                     "font-family": "FontAwesome",
                     "font-size": "1.5em",
                     "margin-right": ".2em",

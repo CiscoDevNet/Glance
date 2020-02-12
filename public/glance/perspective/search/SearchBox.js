@@ -33,7 +33,7 @@
                     "transition-property": "transform",
                     "transition-duration": ".3s",
                     "border-radius": ".2em",
-                    "border": ".1em solid #cd0101"
+                    "border": ".1em solid #00bab0"
                 },
                 ".glance-search-box > .page": {
                     "position": "relative",

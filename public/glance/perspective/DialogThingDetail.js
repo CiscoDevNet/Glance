@@ -28,7 +28,7 @@
         statics: {
             CSS: nx.util.csssheet.create({
                 ".glance-dialog-thing > .body > .content > bullet": {
-                    "color": "#cd0101",
+                    "color": "#00bab0",
                     "font-weight": "bold"
                 }
             })

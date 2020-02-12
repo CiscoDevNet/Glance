@@ -407,8 +407,7 @@
                     "nx:fixed": "0",
                     "font-family": "CiscoSans",
                     "font-weight": "200",
-                    // "background-image": "url(glance/bg.png)",
-                    "background-color": "white",
+                    "background-image": "url(glance/bg.png)",
                     "background-size": "100% 100%"
                 },
                 ".glance.perspective .building": {

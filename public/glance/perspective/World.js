@@ -364,7 +364,7 @@
                 ".glance-world > .labels > nx-element": {
                     "position": "absolute",
                     "transition": ".3s",
-                    "color": "#cd0101"
+                    "color": "#000"
                 },
                 ".glance-world > .labels:not(.active-false) > nx-element": {
                     "max-width": "25%"

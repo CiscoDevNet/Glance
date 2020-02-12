@@ -113,7 +113,7 @@
                 ".glance-dialog-device > .body > .deviceName": {
                     "padding-left": "6em",
                     "margin-top": ".3em",
-                    "color": "#cd0101",
+                    "color": "#00bab0",
                     "font-weight": "lighter"
                 },
                 ".glance-dialog-device > .body > .deviceOwner": {
@@ -223,7 +223,7 @@
                 },
                 ".glance-dialog-device > .body > .button.button-default": {
                     "color": "white",
-                    "background": "#cd0101"
+                    "background": "#00bab0"
                 },
                 ".glance-dialog-device > .body > .button.button-default.disabled": {
                     "visibility": "hidden",

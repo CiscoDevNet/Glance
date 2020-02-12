@@ -51,7 +51,7 @@
                     "padding": "1em"
                 },
                 ".glance-dialog-mark > .body > .content > bullet": {
-                    "color": "#cd0101",
+                    "color": "#00bab0",
                     "font-weight": "bold"
                 },
                 ".glance-dialog-mark > .body > .button": {
@@ -79,7 +79,7 @@
                 },
                 ".glance-dialog-mark > .body > .button.button-default": {
                     "color": "white",
-                    "background": "#cd0101"
+                    "background": "#00bab0"
                 },
                 ".glance-dialog-mark > .body > .button.button-default.disabled": {
                     "visibility": "hidden",

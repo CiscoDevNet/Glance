@@ -92,7 +92,7 @@
                 },
                 ".glance-dialog-profile > .body > .button.button-default": {
                     "color": "white",
-                    "background": "#cd0101"
+                    "background": "#00bab0"
                 },
                 ".glance-dialog-profile > .body > .button.button-default.disabled": {
                     "visibility": "hidden",

@@ -193,16 +193,9 @@
                     if (stops[0][0] !== "m" && stops[0][0] !== "M") {
                         stops.unshift(["M", [0, 0]]);
                     }
+                    path = shape = new THREE.Shape();
                     for (i = 0; i < stops.length; i++) {
                         stop = stops[i];
-                        if (!path) {
-                            if (!shape) {
-                                path = shape = new THREE.Shape();
-                            } else {
-                                path = new THREE.Path();
-                                shape.holes.push(path);
-                            }
-                        }
                         // draw path
                         p = stop[1] && stop[1].slice();
                         switch (stop[0]) {
@@ -341,7 +334,7 @@
                                     path.lineTo.apply(path, p0);
                                 }
                                 // clear current path
-                                path = null;
+                                path.lineTo.apply(path, p0);
                                 // update
                                 pp = p0;
                                 pc = null;

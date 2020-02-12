@@ -211,7 +211,7 @@
                 ".glance-dialog-send-message > .body > .button-group > .button:not(.enable-false)": {
                     "cursor": "default",
                     "color": "white",
-                    "background": "#cd0101"
+                    "background": "#00bab0"
                 },
                 ".glance-dialog-send-message > .body > .button-group > .button:not(.enable-false):hover": {
                     "opacity": ".5"
@@ -251,7 +251,7 @@
                     "border-radius": ".3em",
                     "cursor": "default",
                     "color": "white",
-                    "background": "#cd0101"
+                    "background": "#00bab0"
                 },
                 ".glance-dialog-send-message > .body > .result > .button:hover": {
                     "opacity": ".5"
