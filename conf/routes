@@ -339,10 +339,10 @@ GET           /image/logo/icon-glance.png                             controller
 GET           /api/v1/image/logo/icon-glance.png                      controllers.glance.Avatar.downloadLogoImage
 GET           /glance/icon-glance.png                                 controllers.glance.Avatar.downloadLogoImageRedirect
 
-GET           /image/bg/bg.png                                      controllers.glance.Avatar.downloadMiscImage(imageCate:String ?="bkg",imageName:String ?="bkg.png")
-GET           /api/v1/image/bg/bg.png                               controllers.glance.Avatar.downloadMiscImage(imageCate:String ?="bkg",imageName:String ?="bkg.png")
-GET           /glance/bg.png                                        controllers.glance.Avatar.downloadMiscImageRedirect(imageCate:String ?="bg",imageName:String ?="bg.png")
-GET           /glance/bg/bg.png                                     controllers.glance.Avatar.downloadMiscImageRedirect(imageCate:String ?="bg",imageName:String ?="bg.png")
+GET           /image/bg/bg.png                                      controllers.glance.Avatar.downloadBackground
+GET           /api/v1/image/bg/bg.png                               controllers.glance.Avatar.downloadBackground
+GET           /glance/bg.png                                        controllers.glance.Avatar.downloadBackground
+GET           /glance/bg/bg.png                                     controllers.glance.Avatar.downloadBackground
 
 GET           /image/logo/companyname                               controllers.glance.Avatar.companyName
 

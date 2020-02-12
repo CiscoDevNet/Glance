@@ -487,6 +487,27 @@ object Avatar extends Controller with MongoController with Guard {
     }
   }
 
+  def downloadBackground()= Action.async { implicit request =>
+      val imageCategory: String="bg";
+      val imageName:String="bg.png"
+      //Logger.debug("downloadFacilityImage:{}, imageName: {}",imageCategory,imageName)
+      val credential =remoteCredential
+      for{
+        resourceInfo <- GlanceFacilityImage.readFacilityImage(credential,imageCategory,imageName)
+        res <-{
+          if(resourceInfo.isDefined && resourceInfo.get.imageFileId!=""){
+            val file = gridFS.find(BSONDocument("_id" -> BSONObjectID(resourceInfo.get.imageFileId)))
+            serve(gridFS, file, CONTENT_DISPOSITION_INLINE)
+          }else{
+            Future{getDefaultLogo(imageName)}
+          }
+        }
+      }yield{
+        res
+      }
+  }
+
+
   private def getDefaultLogo(imageNameIn:String): Result = {
     val contentDefault = {
       this.getClass.getResourceAsStream("/public/glance/%s".format(imageNameIn))
