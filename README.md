@@ -26,21 +26,23 @@ The following tools are required to build the project.
 
 ### Build the project
 
-1. Go to folder: [deployment/docker](./deployment/docker)
+1. starts local docker reposity:docker run -d -p 5000:5000 --restart=always --name registry registry:2
+
+2. Go to folder: [deployment/docker](./deployment/docker) and run "mkdir docker images" to create folder - dockerimages
     
-2. Run: `source ./build.sh`
+3. Run: `source ./build.sh`
 
-3. Go to folder: [deployment/docker](./deployment/docker)
+4. Go to folder: [deployment/docker](./deployment/docker)
 
-4. Run: `source ./glance_allbuild.sh 2.0.0.102 localhost`
+5. Run: `source ./glance_allbuild.sh 2.0.0.102 localhost`
    
    * Target version: 2.0.0.102, docker repository host: localhost
 
 ## Test the Services
 
-Start: `Docker-Compose up -d`
+Start: `docker-compose up -d`
   
-Stop: `Docker-Compose down -v`
+Stop: `docker-compose down -v`
     
 ### For Debug Mode to run the Glance Project
 

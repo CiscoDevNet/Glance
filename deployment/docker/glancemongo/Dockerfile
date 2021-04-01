@@ -1,6 +1,6 @@
 #Using the prebuild base mongo docker image
 #FROM 	localhost:5000/glance/mongo:2.0.0.10
-FROM mongo:latest
+FROM mongo:3.6
 # Modify child mongo to use /data/db2 as dbpath (because /data/db wont persist the build)
 RUN mkdir -p /data/db2 \
     && echo "dbpath = /data/db2" > /etc/mongodb.conf \
